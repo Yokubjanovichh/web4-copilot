@@ -736,7 +736,7 @@ body {
 
   .bigStyledText {
     font-size: calc(55 / 5 * 1vw);
-    line-height: calc(55 / 5 * 1vw);
+    line-height: calc(55 / 5 * 1vw) !important;
   }
 
   .bigStyledTextRight {
@@ -754,7 +754,7 @@ body {
 
   .headerTopInsideScroll {
     column-gap: calc(23 / 19.2 * 1vw);
-    top: calc(900 / 5 * 1vw);
+    top: calc(880 / 5 * 1vw);
     left: calc(7 / 5 * 1vw);
     > img {
       width: calc(66 / 5 * 1vw);
