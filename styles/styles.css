@@ -28,6 +28,7 @@ body {
 
 .headerTop {
   width: 100%;
+  height: 100vh;
 }
 
 .headerTop {
@@ -36,7 +37,7 @@ body {
   background: url("../assets/images/header/headerTopBg.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   padding: calc(37 / 19.2 * 1vw) calc(42 / 19.2 * 1vw);
 }
 
@@ -46,7 +47,7 @@ body {
   background: url(../assets/images/header/headerTopInside.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   position: relative;
 }
 
@@ -70,12 +71,12 @@ body {
       line-height: calc(70 / 19.2 * 1vw);
       color: #fff;
       background: none;
-      border-radius: 20px;
+      border-radius: calc(100 / 19.2 * 1vw);
     }
     > button:nth-child(1) {
       padding: calc(3 / 19.2 * 1vw) calc(50.5 / 19.2 * 1vw);
       background: #000;
-      border: 1px solid #000;
+      border: calc(1 / 19.2 * 1vw) solid #000;
       &:hover {
         color: #000;
         background: #fff;
@@ -287,7 +288,10 @@ body {
       background: #010205;
       padding: calc(9 / 19.2 * 1vw) calc(12 / 19.2 * 1vw);
       border-radius: calc(100 / 19.2 * 1vw);
-      margin-left: -12px;
+      margin-left: calc(-12 / 19.2 * 1vw);
+    }
+    > img {
+      width: calc(19 / 19.2 * 1vw);
     }
   }
   > p:nth-child(2) {
@@ -370,7 +374,7 @@ body {
   align-items: flex-start;
   column-gap: calc(23 / 19.2 * 1vw);
   position: absolute;
-  bottom: 0;
+  top: calc(869 / 19.2 * 1vw);
   left: calc(18 / 19.2 * 1vw);
   -webkit-animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1)
     both;
@@ -405,7 +409,7 @@ body {
   background-position: center;
   background-size: cover;
   position: absolute;
-  bottom: calc(109 / 19.2 * 1vw);
+  top: calc(235 / 19.2 * 1vw);
   left: calc(651 / 19.2 * 1vw);
   z-index: 2;
   -webkit-animation: slide-in-blurred-top 1s cubic-bezier(0.23, 1, 0.32, 1) both;
@@ -546,4 +550,10 @@ body {
   }
   animation: slide-out-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
   animation-delay: 0.2s;
+}
+
+@media only screen and (max-width: 500px) {
+  .headerTopInside {
+    background: none;
+  }
 }

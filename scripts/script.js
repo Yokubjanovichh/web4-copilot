@@ -19,7 +19,7 @@ window.addEventListener("scroll", function () {
   const mineInfo4 = document.querySelector(".mineInfo4");
 
   if (currentScrollY > previousScrollY) {
-    scrollingElement.style.bottom = "-100vh";
+    scrollingElement.style.top = "145vh";
     scrollingElement.style.width = "calc(1082 / 19.2 * 1vw)";
     scrollingElement.style.height = "calc(600 / 19.2 * 1vw)";
     scrollingElement.style.backgroundPosition = "top";
@@ -62,7 +62,7 @@ window.addEventListener("scroll", function () {
       "slide-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1) both";
     mineInfo4.style.animationDelay = "1s";
   } else if (currentScrollY < previousScrollY) {
-    scrollingElement.style.bottom = "10vh";
+    scrollingElement.style.top = "calc(235 / 19.2 * 1vw)";
     scrollingElement.style.width = "calc(770 / 19.2 * 1vw)";
     scrollingElement.style.height = "calc(700 / 19.2 * 1vw)";
     scrollingElement.style.backgroundSize = "cover";
