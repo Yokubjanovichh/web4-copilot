@@ -1,22 +1,3 @@
-// window.addEventListener("scroll", function () {
-// const scrollingElement = document.querySelector(".mainMineGif");
-//   scrollingElement.style.bottom = "-120vh";
-
-//   const element = document.querySelector(".mainMineGif");
-//   const rect = element.getBoundingClientRect();
-
-//   //   console.log("Left:", rect.left); // Левая граница элемента относительно окна браузера
-//   //   console.log("Top:", rect.top); // Верхняя граница элемента относительно окна браузера
-//   //   console.log("Right:", rect.right);
-//   //   console.log("Bottom:", rect.bottom);
-
-//   //   if (rect.bottom > 350) {
-//   //     scrollingElement.style.top = rect.top + 200 + "px";
-//   //   } else {
-//   //     scrollingElement.style.top = window.scrollY + "px";
-//   //   }
-// });
-
 let previousScrollY = window.scrollY;
 
 window.addEventListener("scroll", function () {
@@ -32,6 +13,10 @@ window.addEventListener("scroll", function () {
     ".headerTopInsideBodyTitleRight"
   );
   const mineGifFooter = document.querySelector(".mineGifFooter");
+  const mineInfo1 = document.querySelector(".mineInfo1");
+  const mineInfo2 = document.querySelector(".mineInfo2");
+  const mineInfo3 = document.querySelector(".mineInfo3");
+  const mineInfo4 = document.querySelector(".mineInfo4");
 
   if (currentScrollY > previousScrollY) {
     scrollingElement.style.bottom = "-100vh";
@@ -64,6 +49,18 @@ window.addEventListener("scroll", function () {
     mineGifFooter.style.animation =
       "slide-out-right 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both";
     mineGifFooter.style.animationDelay = "1.6s";
+    mineInfo1.style.animation =
+      "slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both";
+    mineInfo1.style.animationDelay = "1s";
+    mineInfo2.style.animation =
+      "slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both";
+    mineInfo2.style.animationDelay = "1s";
+    mineInfo3.style.animation =
+      "slide-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1) both";
+    mineInfo3.style.animationDelay = "1s";
+    mineInfo4.style.animation =
+      "slide-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1) both";
+    mineInfo4.style.animationDelay = "1s";
   } else if (currentScrollY < previousScrollY) {
     scrollingElement.style.bottom = "10vh";
     scrollingElement.style.width = "calc(770 / 19.2 * 1vw)";
@@ -94,6 +91,19 @@ window.addEventListener("scroll", function () {
     mineGifFooter.style.animation =
       "slide-in-blurred-bottom 1s cubic-bezier(0.23, 1, 0.32, 1) both";
     mineGifFooter.style.animationDelay = "1.6s";
+
+    mineInfo1.style.animation =
+      "slide-out-left 1s cubic-bezier(0.23, 1, 0.32, 1) both";
+    mineInfo1.style.animationDelay = "0.1s";
+    mineInfo2.style.animation =
+      "slide-out-left 1s cubic-bezier(0.23, 1, 0.32, 1) both";
+    mineInfo2.style.animationDelay = "0.1s";
+    mineInfo3.style.animation =
+      "slide-out-right 1s cubic-bezier(0.23, 1, 0.32, 1) both";
+    mineInfo3.style.animationDelay = "0.1s";
+    mineInfo4.style.animation =
+      "slide-out-right 1s cubic-bezier(0.23, 1, 0.32, 1) both";
+    mineInfo4.style.animationDelay = "0.1s";
   }
   previousScrollY = currentScrollY;
 });
