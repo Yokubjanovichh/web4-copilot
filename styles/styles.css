@@ -16,23 +16,21 @@ button {
 }
 
 body {
-  width: 100%;
   background: #e0e3f2;
+  overflow-x: hidden;
 }
 
 .header {
-  width: 100%;
   height: 200vh;
   overflow: hidden;
+  overflow-x: hidden;
 }
 
 .headerTop {
-  width: 100%;
   height: 100vh;
 }
 
 .headerTop {
-  width: 100%;
   height: 100vh;
   background: url("../assets/images/header/headerTopBg.png");
   background-position: center;
@@ -42,7 +40,6 @@ body {
 }
 
 .headerTopInside {
-  width: 100%;
   height: 100%;
   background: url(../assets/images/header/headerTopInside.png);
   background-position: center;
@@ -52,7 +49,6 @@ body {
 }
 
 .headerTopInsideHeader {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -111,14 +107,12 @@ body {
 }
 
 .headerTopInsideBody {
-  width: 100%;
   margin-top: calc(53 / 19.2 * 1vw);
   position: relative;
   z-index: 10;
 }
 
 .headerTopInsideBodyTitle {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -276,7 +270,6 @@ body {
   animation-delay: 0.4s;
 
   > .watchIntroHeader {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -308,7 +301,6 @@ body {
     margin-bottom: calc(12 / 19.2 * 1vw);
   }
   > .footer {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -419,6 +411,15 @@ body {
   transition: all 1.5s ease;
 }
 
+.mainMineGifMove {
+  width: calc(1082 / 19.2 * 1vw);
+  height: calc(600 / 19.2 * 1vw);
+  background-position: top;
+  background-size: cover 120%;
+  top: 145vh;
+  left: calc(422 / 19.2 * 1vw);
+}
+
 .mineGifFooter {
   width: calc(687 / 19.2 * 1vw);
   height: calc(345 / 19.2 * 1vw);
@@ -441,7 +442,6 @@ body {
 /* header bottom */
 
 .headerBottom {
-  width: 100%;
   height: 100vh;
   background: url(../assets/images/header/headerBottomFirst.png);
   background-repeat: no-repeat;
@@ -554,6 +554,9 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+  .header {
+    height: 160.2vh;
+  }
   .headerTopInside {
     background: none;
   }
@@ -598,7 +601,6 @@ body {
   }
 
   .headerTopInsideBodyTitle {
-    width: 100%;
     flex-direction: column;
     row-gap: calc(20 / 5 * 1vw);
   }
@@ -716,27 +718,9 @@ body {
     }
   }
 
-  .mainMineGif {
-    width: calc(300 / 5 * 1vw) !important;
-    height: calc(300 / 5 * 1vw) !important;
-    background-size: cover;
-    top: calc(200 / 5 * 1vw) !important;
-    left: calc(100 / 5 * 1vw) !important;
-  }
-
-  .mineGifFooter {
-    width: calc(687 / 5 * 1vw);
-    height: calc(160 / 5 * 1vw);
-    background-position: left, calc(-15 / 5 * 1vw) bottom;
-    background-size: calc(250 / 5 * 1vw) calc(140 / 5 * 1vw),
-      calc(300 / 5 * 1vw) calc(17 / 5 * 1vw);
-    top: calc(380 / 5 * 1vw);
-    left: calc(152 / 5 * 1vw);
-  }
-
   .bigStyledText {
     font-size: calc(55 / 5 * 1vw);
-    line-height: calc(55 / 5 * 1vw);
+    line-height: calc(55 / 5 * 1vw) !important;
   }
 
   .bigStyledTextRight {
@@ -754,7 +738,7 @@ body {
 
   .headerTopInsideScroll {
     column-gap: calc(23 / 19.2 * 1vw);
-    top: calc(900 / 5 * 1vw);
+    top: calc(880 / 5 * 1vw);
     left: calc(7 / 5 * 1vw);
     > img {
       width: calc(66 / 5 * 1vw);
@@ -771,5 +755,141 @@ body {
         top: calc(17 / 5 * 1vw);
       }
     }
+  }
+
+  .mainMineGif2 {
+    width: calc(300 / 5 * 1vw);
+    height: calc(300 / 5 * 1vw);
+    top: calc(200 / 5 * 1vw);
+    left: calc(100 / 5 * 1vw);
+  }
+
+  .mainMineGifMove {
+    width: calc(400 / 5 * 1vw);
+    height: calc(200 / 5 * 1vw);
+    background-position: top;
+    background-size: 120% cover;
+    top: 134.5vh;
+    left: calc(50 / 5 * 1vw);
+  }
+
+  .mineGifFooter {
+    width: calc(270 / 5 * 1vw);
+    height: calc(160 / 5 * 1vw);
+    background-position: left, calc(-15 / 5 * 1vw) bottom;
+    background-size: calc(250 / 5 * 1vw) calc(140 / 5 * 1vw),
+      calc(300 / 5 * 1vw) calc(17 / 5 * 1vw);
+    top: calc(380 / 5 * 1vw);
+    left: calc(152 / 5 * 1vw);
+  }
+
+  /* header bottom */
+
+  .headerBottom {
+    height: 60vh;
+    background-size: 100% 98%;
+  }
+
+  .headerBottom > p {
+    font-size: calc(47 / 5 * 1vw);
+    line-height: calc(50 / 5 * 1vw);
+    margin-top: calc(20 / 5 * 1vw);
+    > sup {
+      font-size: calc(30 / 5 * 1vw);
+    }
+  }
+
+  .headerBottomInside {
+    width: 100%;
+    height: 100%;
+  }
+
+  .headerBottomInsideTitleSection {
+    margin-top: calc(60 / 5 * 1vw);
+    > p {
+      font-size: calc(10 / 5 * 1vw);
+      line-height: calc(14 / 5 * 1vw);
+    }
+    > p:nth-child(2) {
+      width: calc(350 / 5 * 1vw);
+      font-weight: 400;
+    }
+  }
+
+  .arrowBoxExtra {
+    width: calc(130 / 5 * 1vw);
+    height: calc(100 / 5 * 1vw);
+    padding: calc(35 / 19.2 * 1vw) calc(10.3 / 19.2 * 1vw) calc(59 / 19.2 * 1vw)
+      calc(31 / 19.2 * 1vw);
+    > span {
+      width: calc(25 / 5 * 1vw);
+      height: calc(25 / 5 * 1vw);
+      > img {
+        width: calc(9 / 5 * 1vw);
+      }
+    }
+    > p:nth-child(2) {
+      font-size: calc(10 / 5 * 1vw);
+      line-height: calc(13 / 5 * 1vw);
+      margin-bottom: calc(25 / 19.2 * 1vw);
+    }
+    > p:nth-child(3) {
+      font-size: calc(8 / 5 * 1vw);
+      line-height: calc(12 / 5 * 1vw);
+    }
+  }
+
+  .arrowBoxSmall {
+    width: calc(100 / 5 * 1vw);
+    height: calc(80 / 5 * 1vw);
+    > span {
+      width: calc(20 / 5 * 1vw);
+      height: calc(20 / 5 * 1vw);
+      > img {
+        width: calc(6 / 5 * 1vw);
+      }
+    }
+    > p:nth-child(2) {
+      font-size: calc(8 / 5 * 1vw);
+      line-height: calc(10 / 5 * 1vw);
+      margin-bottom: calc(7 / 5 * 1vw);
+    }
+    > p:nth-child(3) {
+      font-size: calc(6 / 5 * 1vw);
+      line-height: calc(8 / 5 * 1vw);
+    }
+  }
+
+  .mineInfo1 {
+    bottom: calc(10 / 5 * 1vw);
+    left: calc(10 / 5 * 1vw);
+    > img {
+      margin-left: calc(40 / 5 * 1vw);
+    }
+  }
+  .mineInfo2 {
+    bottom: calc(140 / 5 * 1vw);
+    left: calc(130 / 5 * 1vw);
+    > img {
+      margin-left: calc(30 / 5 * 1vw);
+    }
+  }
+
+  .mineInfo3 {
+    bottom: calc(140 / 5 * 1vw);
+    right: calc(120 / 5 * 1vw);
+    > img {
+      margin-left: calc(20 / 5 * 1vw);
+    }
+  }
+
+  .mineInfo4 {
+    bottom: 0;
+    right: calc(10 / 5 * 1vw);
+    > img {
+      margin-left: calc(-10 / 5 * 1vw);
+    }
+    animation: slide-out-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 0.2s;
   }
 }
