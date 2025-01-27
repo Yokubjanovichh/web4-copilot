@@ -555,7 +555,7 @@ body {
 
 @media only screen and (max-width: 500px) {
   .header {
-    height: 160.2vh;
+    height: max-content;
   }
   .headerTopInside {
     background: none;
@@ -680,7 +680,7 @@ body {
     border-radius: calc(10 / 5 * 1vw);
     padding: 0 calc(15 / 5 * 1vw) calc(8 / 5 * 1vw) calc(9 / 5 * 1vw);
     margin-left: calc(7 / 5 * 1vw);
-    margin-top: calc(220 / 5 * 1vw);
+    margin-top: calc(210 / 5 * 1vw);
     > .watchIntroHeader {
       > p {
         font-size: calc(14 / 5 * 1vw);
@@ -724,7 +724,7 @@ body {
   }
 
   .bigStyledTextRight {
-    top: calc(803 / 5 * 1vw);
+    top: calc(783 / 5 * 1vw);
     right: calc(7 / 5 * 1vw);
     > sup {
       font-size: calc(100 / 19.2 * 1vw);
@@ -732,13 +732,13 @@ body {
   }
 
   .bigStyledTextLeft {
-    top: calc(714 / 5 * 1vw);
+    top: calc(690 / 5 * 1vw);
     left: calc(7 / 5 * 1vw);
   }
 
   .headerTopInsideScroll {
     column-gap: calc(23 / 19.2 * 1vw);
-    top: calc(880 / 5 * 1vw);
+    top: calc(840 / 5 * 1vw);
     left: calc(7 / 5 * 1vw);
     > img {
       width: calc(66 / 5 * 1vw);
@@ -868,7 +868,7 @@ body {
     }
   }
   .mineInfo2 {
-    bottom: calc(140 / 5 * 1vw);
+    bottom: calc(120 / 5 * 1vw);
     left: calc(130 / 5 * 1vw);
     > img {
       margin-left: calc(30 / 5 * 1vw);
@@ -876,7 +876,7 @@ body {
   }
 
   .mineInfo3 {
-    bottom: calc(140 / 5 * 1vw);
+    bottom: calc(120 / 5 * 1vw);
     right: calc(120 / 5 * 1vw);
     > img {
       margin-left: calc(20 / 5 * 1vw);
