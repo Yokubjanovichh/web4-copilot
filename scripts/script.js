@@ -1,100 +1,87 @@
 let previousScrollY = window.scrollY;
+const scrollingElement = document.querySelector(".mainMineGif");
 
-window.addEventListener("scroll", function () {
-  const currentScrollY = window.scrollY;
-  const scrollingElement = document.querySelector(".mainMineGif");
-  const headerTopInsideBodyTitleLeft = document.querySelector(
-    ".headerTopInsideBodyTitleLeft"
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".section");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const headerTopElements = document.querySelectorAll(
+          ".headerTopInsideBodyTitleLeft, \
+            .headerTopInsideBodyTitleRight, \
+            .watchIntro, \
+            .bigStyledTextLeft, \
+            .bigStyledTextRight, \
+            .headerTopInsideScroll, \
+            .mineGifFooter"
+        );
+
+        const mineInfos = document.querySelectorAll(
+          ".mineInfo1, \
+            .mineInfo2, \
+            .mineInfo3, \
+            .mineInfo4"
+        );
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+
+          if (entry.target === sections[0]) {
+            // Birinchi section
+            headerTopElements?.forEach((el) => {
+              el?.classList.remove("hidden");
+              el?.classList.add("active");
+            });
+
+            scrollingElement.classList.remove("mainMineGifMove");
+          } else {
+            headerTopElements?.forEach((el) => {
+              el?.classList.remove("active");
+              el?.classList.add("hidden");
+            });
+          }
+
+          if (entry.target === sections[1]) {
+            // Ikkinchi section
+            mineInfos?.forEach((el) => {
+              el?.classList.remove("hidden");
+              el?.classList.add("active");
+            });
+
+            scrollingElement.classList.add("mainMineGifMove");
+          } else {
+            mineInfos?.forEach((el) => {
+              el?.classList.remove("active");
+              el?.classList.add("hidden");
+            });
+          }
+        } else {
+          entry.target.classList.remove("active");
+        }
+      });
+    },
+    { threshold: 0.3 }
   );
-  const watchIntro = document.querySelector(".watchIntro");
-  const bigStyledTextLeft = document.querySelector(".bigStyledTextLeft");
-  const bigStyledTextRight = document.querySelector(".bigStyledTextRight");
-  const headerTopInsideBodyTitleRight = document.querySelector(
-    ".headerTopInsideBodyTitleRight"
-  );
-  const mineGifFooter = document.querySelector(".mineGifFooter");
-  const mineInfo1 = document.querySelector(".mineInfo1");
-  const mineInfo2 = document.querySelector(".mineInfo2");
-  const mineInfo3 = document.querySelector(".mineInfo3");
-  const mineInfo4 = document.querySelector(".mineInfo4");
 
-  if (currentScrollY > previousScrollY) {
-    scrollingElement.classList.add("mainMineGifMove");
+  sections.forEach((section) => observer.observe(section));
 
-    headerTopInsideBodyTitleLeft.style.animation =
-      "slide-out-left 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both";
-    headerTopInsideBodyTitleLeft.style.animationDelay = "0.2s";
+  // Scroll hodisasini faqat bir marta qo‘shamiz
+  window.addEventListener("scroll", function () {
+    const currentScrollY = window.scrollY;
 
-    watchIntro.style.animation =
-      "slide-out-left 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both";
-    watchIntro.style.animationDelay = "0.4s";
+    if (currentScrollY > previousScrollY) {
+      // Pastga harakat
+      if (sections[1].classList.contains("active")) {
+        scrollingElement.classList.add("mainMineGifMove");
+      }
+    } else {
+      // Tepaga harakat
+      if (sections[0].classList.contains("active")) {
+        scrollingElement.classList.remove("mainMineGifMove");
+      }
+    }
 
-    bigStyledTextLeft.style.animation =
-      "slide-out-left 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both";
-    bigStyledTextLeft.style.animationDelay = "1.2s";
-
-    bigStyledTextRight.style.animation =
-      "slide-out-right 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both";
-    bigStyledTextRight.style.animationDelay = "1.2s";
-
-    headerTopInsideBodyTitleRight.style.animation =
-      "slide-out-right 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both";
-    headerTopInsideBodyTitleRight.style.animationDelay = "1.2s";
-
-    mineGifFooter.style.animation =
-      "slide-out-right 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both";
-    mineGifFooter.style.animationDelay = "1.6s";
-    mineInfo1.style.animation =
-      "slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both";
-    mineInfo1.style.animationDelay = "1s";
-    mineInfo2.style.animation =
-      "slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both";
-    mineInfo2.style.animationDelay = "1s";
-    mineInfo3.style.animation =
-      "slide-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1) both";
-    mineInfo3.style.animationDelay = "1s";
-    mineInfo4.style.animation =
-      "slide-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1) both";
-    mineInfo4.style.animationDelay = "1s";
-  } else if (currentScrollY < previousScrollY) {
-    scrollingElement.classList.remove("mainMineGifMove");
-
-    headerTopInsideBodyTitleLeft.style.animation =
-      "slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both";
-    headerTopInsideBodyTitleLeft.style.animationDelay = "0.2s";
-
-    watchIntro.style.animation =
-      "slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both";
-    watchIntro.style.animationDelay = "0.4s";
-
-    bigStyledTextLeft.style.animation =
-      "slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both";
-    bigStyledTextLeft.style.animationDelay = "1.2s";
-
-    bigStyledTextRight.style.animation =
-      "slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both";
-    bigStyledTextRight.style.animationDelay = "1.2s";
-
-    headerTopInsideBodyTitleRight.style.animation =
-      "slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both";
-    headerTopInsideBodyTitleRight.style.animationDelay = "0.6s";
-
-    mineGifFooter.style.animation =
-      "slide-in-blurred-bottom 1s cubic-bezier(0.23, 1, 0.32, 1) both";
-    mineGifFooter.style.animationDelay = "1.6s";
-
-    mineInfo1.style.animation =
-      "slide-out-left 1s cubic-bezier(0.23, 1, 0.32, 1) both";
-    mineInfo1.style.animationDelay = "0.1s";
-    mineInfo2.style.animation =
-      "slide-out-left 1s cubic-bezier(0.23, 1, 0.32, 1) both";
-    mineInfo2.style.animationDelay = "0.1s";
-    mineInfo3.style.animation =
-      "slide-out-right 1s cubic-bezier(0.23, 1, 0.32, 1) both";
-    mineInfo3.style.animationDelay = "0.1s";
-    mineInfo4.style.animation =
-      "slide-out-right 1s cubic-bezier(0.23, 1, 0.32, 1) both";
-    mineInfo4.style.animationDelay = "0.1s";
-  }
-  previousScrollY = currentScrollY;
+    previousScrollY = currentScrollY;
+  });
 });
