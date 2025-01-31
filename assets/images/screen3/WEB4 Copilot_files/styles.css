@@ -117,6 +117,10 @@ button {
 
 .headerTopInsideBodyTitleLeft {
   padding: 0 calc(35 / 19.2 * 1vw) 0 calc(48 / 19.2 * 1vw);
+  /* -webkit-animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1)
+    both; */
+  /* animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation-delay: 0.2s; */
   > p,
   > div > p {
     font-family: Orbitron;
@@ -155,6 +159,10 @@ button {
   flex-direction: column;
   align-items: center;
   row-gap: calc(25 / 19.2 * 1vw);
+  -webkit-animation: slide-in-blurred-right 0.6s cubic-bezier(0.23, 1, 0.32, 1)
+    both;
+  animation: slide-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation-delay: 0.6s;
   > .boxes {
     display: flex;
     align-items: center;
@@ -253,6 +261,11 @@ button {
   padding: 0 calc(18 / 19.2 * 1vw) calc(11 / 19.2 * 1vw) calc(13 / 19.2 * 1vw);
   background: #fff;
   margin-left: calc(62 / 19.2 * 1vw);
+  -webkit-animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1)
+    both;
+  animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation-delay: 0.4s;
+
   > .watchIntroHeader {
     display: flex;
     align-items: center;
@@ -344,6 +357,10 @@ button {
   position: absolute;
   bottom: calc(12 / 19.2 * 1vw);
   left: calc(18 / 19.2 * 1vw);
+  -webkit-animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1)
+    both;
+  animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation-delay: 0.8s;
   > img {
     width: calc(126 / 19.2 * 1vw);
     height: calc(126 / 19.2 * 1vw);
@@ -412,6 +429,7 @@ button {
 
 .headerTopInsideBodyTitleLeft.active {
   animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation-delay: 0.2s;
 }
 
 .headerTopInsideBodyTitleRight.hidden {
@@ -420,6 +438,7 @@ button {
 
 .headerTopInsideBodyTitleRight.active {
   animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation-delay: 0.6s;
 }
 
 .watchIntro.hidden {
@@ -428,6 +447,7 @@ button {
 
 .watchIntro.active {
   animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation-delay: 0.6s;
 }
 
 .bigStyledTextLeft.hidden {
@@ -435,6 +455,7 @@ button {
 }
 .bigStyledTextLeft.active {
   animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation-delay: 1.2s;
 }
 
 .bigStyledTextRight.hidden {
@@ -442,6 +463,7 @@ button {
 }
 .bigStyledTextRight.active {
   animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation-delay: 1.2s;
 }
 
 .headerTopInsideScroll.hidden {
@@ -449,31 +471,16 @@ button {
 }
 .headerTopInsideScroll.active {
   animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation-delay: 1s;
 }
 
 .mineGifFooter.hidden {
   animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation-delay: 0.3s;
 }
 .mineGifFooter.active {
   animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
-
-.mineInfo1.hidden,
-.mineInfo2.hidden {
-  animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-.mineInfo1.active,
-.mineInfo2.active {
-  animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
-
-.mineInfo3.hidden,
-.mineInfo4.hidden {
-  animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-.mineInfo3.active,
-.mineInfo4.active {
-  animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation-delay: 1.3s;
 }
 
 /* header bottom */
@@ -542,7 +549,7 @@ button {
   z-index: 3;
 }
 
-.mineInfo1 {
+.mineInfo1.hidden {
   bottom: calc(17 / 19.2 * 1vw);
   left: calc(150 / 19.2 * 1vw);
   > img {
@@ -554,7 +561,7 @@ button {
   animation-delay: 0.2s;
 }
 
-.mineInfo2 {
+.mineInfo2.hidden {
   bottom: calc(314.5 / 19.2 * 1vw);
   left: calc(560 / 19.2 * 1vw);
   > img {
@@ -566,7 +573,7 @@ button {
   animation-delay: 0.2s;
 }
 
-.mineInfo3 {
+.mineInfo3.hidden {
   bottom: calc(305 / 19.2 * 1vw);
   right: calc(511 / 19.2 * 1vw);
   > img {
@@ -578,7 +585,7 @@ button {
   animation-delay: 0.2s;
 }
 
-.mineInfo4 {
+.mineInfo4.hidden {
   bottom: 0;
   right: calc(119 / 19.2 * 1vw);
   > img {
