@@ -24,11 +24,27 @@ document.addEventListener("DOMContentLoaded", () => {
             .mineInfo4"
         );
 
+        const screen3Container = document.querySelectorAll(
+          ".screen3ContainerWrapper,\
+          .screen3ContainerWrapperLeft, \
+          .screen3ContainerWrapperRight"
+        );
+
+        const screen4Container = document.querySelectorAll(
+          ".robotHeadRightCircle,\
+          .robotHeadRightCircleImg, \
+          .textIconWrapper,\
+          .screen4ContainerTitle,\
+          .textIconWrapper1,\
+           .textIconWrapper2,\
+          .textIconWrapper3, \
+          .textIconWrapper4"
+        );
+
         if (entry.isIntersecting) {
           entry.target.classList.add("active");
 
           if (entry.target === sections[0]) {
-            // Birinchi section
             headerTopElements?.forEach((el) => {
               el?.classList.remove("hidden");
               el?.classList.add("active");
@@ -43,15 +59,37 @@ document.addEventListener("DOMContentLoaded", () => {
           }
 
           if (entry.target === sections[1]) {
-            // Ikkinchi section
             mineInfos?.forEach((el) => {
               el?.classList.remove("hidden");
               el?.classList.add("active");
             });
-
             scrollingElement.classList.add("mainMineGifMove");
           } else {
             mineInfos?.forEach((el) => {
+              el?.classList.remove("active");
+              el?.classList.add("hidden");
+            });
+          }
+
+          if (entry.target === sections[2]) {
+            screen3Container?.forEach((el) => {
+              el?.classList.remove("hidden");
+              el?.classList.add("active");
+            });
+          } else {
+            screen3Container?.forEach((el) => {
+              el?.classList.remove("active");
+              el?.classList.add("hidden");
+            });
+          }
+
+          if (entry.target === sections[3]) {
+            screen4Container?.forEach((el) => {
+              el?.classList.remove("hidden");
+              el?.classList.add("active");
+            });
+          } else {
+            screen4Container?.forEach((el) => {
               el?.classList.remove("active");
               el?.classList.add("hidden");
             });
@@ -66,17 +104,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   sections.forEach((section) => observer.observe(section));
 
-  // Scroll hodisasini faqat bir marta qo‘shamiz
   window.addEventListener("scroll", function () {
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > previousScrollY) {
-      // Pastga harakat
       if (sections[1].classList.contains("active")) {
         scrollingElement.classList.add("mainMineGifMove");
       }
     } else {
-      // Tepaga harakat
       if (sections[0].classList.contains("active")) {
         scrollingElement.classList.remove("mainMineGifMove");
       }
