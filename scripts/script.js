@@ -41,6 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
           .textIconWrapper4"
         );
 
+        const screen5Container = document.querySelectorAll(
+          ".screen5ContainerMainLeft,\
+          .screen5ContainerMainRight"
+        );
+
         if (entry.isIntersecting) {
           entry.target.classList.add("active");
 
@@ -90,6 +95,18 @@ document.addEventListener("DOMContentLoaded", () => {
             });
           } else {
             screen4Container?.forEach((el) => {
+              el?.classList.remove("active");
+              el?.classList.add("hidden");
+            });
+          }
+
+          if (entry.target === sections[4]) {
+            screen5Container?.forEach((el) => {
+              el?.classList.remove("hidden");
+              el?.classList.add("active");
+            });
+          } else {
+            screen5Container?.forEach((el) => {
               el?.classList.remove("active");
               el?.classList.add("hidden");
             });
