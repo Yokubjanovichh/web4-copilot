@@ -14,7 +14,7 @@
 .screen5ContainerMainLeft {
   width: calc(989 / 19.2 * 1vw);
   height: 100%;
-  background: url("../assets/images/screen4/section5LeftBgGif.gif");
+  background: url("../assets/images/screen5/section5LeftBgGif.gif");
   background-size: 100% 100%;
   background-position: top;
   background-repeat: no-repeat;
@@ -30,7 +30,7 @@
   display: flex;
   align-items: center;
   column-gap: calc(4 / 19.2 * 1vw);
-  background: url("../assets/images/screen4/01BgImg.png");
+  background: url("../assets/images/screen5/01BgImg.png");
   background-size: 100%;
   background-repeat: no-repeat;
   padding: calc(14 / 19.2 * 1vw) calc(16 / 19.2 * 1vw) calc(17 / 19.2 * 1vw)
@@ -132,7 +132,7 @@
 }
 
 .screen5ContainerMainLeftBox2 {
-  background: url("../assets/images/screen4/02BgImg.png");
+  background: url("../assets/images/screen5/02BgImg.png");
   background-size: 100%;
 }
 
@@ -340,7 +340,7 @@
   animation-delay: 0.2s;
 }
 
-.screen5ContainerMainRight {
+.screen5ContainerMainRight.active {
   animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
   animation-delay: 0.5s;
 }
@@ -349,11 +349,3 @@
   animation: slide-out-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
   animation-delay: 0.5s;
 }
-
-/* .robotHeadRightCircle.active {
-  animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
-
-.robotHeadRightCircle.hidden {
-  animation: slide-out-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-} */

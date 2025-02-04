@@ -101,7 +101,9 @@ document.addEventListener("DOMContentLoaded", () => {
           }
 
           if (entry.target === sections[4]) {
+            console.log("hello");
             screen5Container?.forEach((el) => {
+              console.log(el);
               el?.classList.remove("hidden");
               el?.classList.add("active");
             });
@@ -135,5 +137,41 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     previousScrollY = currentScrollY;
+  });
+});
+
+// change bg image
+
+document.addEventListener("DOMContentLoaded", function () {
+  const rightBox1 = document.querySelector(".rightBox1");
+  const rightBox3 = document.querySelector(".rightBox3");
+  const rightBox4 = document.querySelector(".rightBox4");
+  const rightBox6 = document.querySelector(".rightBox6");
+  const rightBox7 = document.querySelector(".rightBox7");
+
+  const leftContainer = document.querySelector(".screen6ContainerMainLeft");
+
+  rightBox1.addEventListener("click", function () {
+    leftContainer.style.backgroundImage =
+      "url('../assets/images/screen6/example2.png')";
+  });
+  rightBox3.addEventListener("click", function () {
+    leftContainer.style.backgroundImage =
+      "url('../assets/images/screen6/example4.png')";
+  });
+
+  rightBox4.addEventListener("click", function () {
+    leftContainer.style.backgroundImage =
+      "url('../assets/images/screen6/example1.png')";
+  });
+
+  rightBox6.addEventListener("click", function () {
+    leftContainer.style.backgroundImage =
+      "url('../assets/images/screen6/example4.png')";
+  });
+
+  rightBox7.addEventListener("click", function () {
+    leftContainer.style.backgroundImage =
+      "url('../assets/images/screen6/example5.png')";
   });
 });

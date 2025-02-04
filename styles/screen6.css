@@ -1,0 +1,467 @@
+.screen6ContainerMain {
+  height: 100vh;
+  overflow: hidden;
+  padding-left: calc(37 / 19.2 * 1vw);
+  padding-right: calc(90 / 19.2 * 1vw);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.screen6ContainerMainLeftTop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.screen6ContainerMainLeft {
+  width: calc(1267 / 19.2 * 1vw);
+  height: 100%;
+  background: url("../assets/images/screen6/example1.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-right: calc(41 / 19.2 * 1vw);
+  padding-bottom: calc(16.5 * 1vw);
+  transition: all 0.1s linear;
+}
+
+.screen6ContainerMainLeftInsideLeft {
+  padding-left: calc(38 / 19.2 * 1vw);
+  display: flex;
+  flex-direction: column;
+  row-gap: calc(70 / 19.2 * 1vw);
+  > img {
+    width: calc(148 / 19.2 * 1vw);
+  }
+  > .box {
+    width: calc(285 / 19.2 * 1vw);
+    padding: calc(21 / 19.2 * 1vw) calc(17 / 19.2 * 1vw) calc(21 / 19.2 * 1vw)
+      calc(21 / 19.2 * 1vw);
+    border-radius: calc(30 / 19.2 * 1vw);
+    background: rgba(255, 255, 255, 1);
+    opacity: 0.71;
+    margin-left: calc(11 / 19.2 * 1vw);
+  }
+  .boxTextTop,
+  .boxTextBottom {
+    display: flex;
+    flex-direction: column;
+    row-gap: calc(10 / 19.2 * 1vw);
+    > p:nth-child(1) {
+      font-family: Raleway;
+      font-size: calc(22 / 19.2 * 1vw);
+      font-weight: 600;
+      line-height: calc(25 / 19.2 * 1vw);
+      text-align: left;
+      color: rgba(14, 14, 14, 1);
+    }
+    > p:nth-child(2) {
+      font-family: Raleway;
+      font-size: calc(16 / 19.2 * 1vw);
+      font-weight: 400;
+      line-height: calc(25 / 19.2 * 1vw);
+      text-align: left;
+      color: rgba(49, 49, 49, 1);
+    }
+  }
+  .boxTextBottom {
+    margin-top: calc(22 / 19.2 * 1vw);
+  }
+}
+
+.screen6ContainerMainLeftInsideright {
+  width: calc(285 / 19.2 * 1vw);
+  height: calc(260 / 19.2 * 1vw);
+  display: flex;
+  flex-direction: column;
+  row-gap: calc(10 / 19.2 * 1vw);
+  padding: calc(21 / 19.2 * 1vw) calc(17 / 19.2 * 1vw) calc(21 / 19.2 * 1vw)
+    calc(21 / 19.2 * 1vw);
+  border-radius: calc(30 / 19.2 * 1vw);
+  background: rgba(255, 255, 255, 1);
+  opacity: 0.71;
+  margin-top: calc(28 / 19.2 * 1vw);
+  > p:nth-child(1) {
+    font-family: Raleway;
+    font-size: calc(22 / 19.2 * 1vw);
+    font-weight: 600;
+    line-height: calc(25 / 19.2 * 1vw);
+    text-align: left;
+    color: rgba(14, 14, 14, 1);
+  }
+  > p:nth-child(2) {
+    font-family: Raleway;
+    font-size: calc(16 / 19.2 * 1vw);
+    font-weight: 400;
+    line-height: calc(25 / 19.2 * 1vw);
+    text-align: left;
+    color: rgba(49, 49, 49, 1);
+  }
+}
+
+.screen6ContainerMainLeftBottom {
+  margin-top: calc(86 / 19.2 * 1vw);
+  .example3 {
+    display: flex;
+    align-items: center;
+    column-gap: calc(14 / 19.2 * 1vw);
+    > button {
+      width: calc(146 / 19.2 * 1vw);
+      height: calc(55 / 19.2 * 1vw);
+      background: url("../assets/images/screen6/btnBg.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      border: none;
+    }
+    > p {
+      font-family: Raleway;
+      font-size: calc(18 / 19.2 * 1vw);
+      font-weight: 500;
+      line-height: calc(79 / 19.2 * 1vw);
+      text-align: left;
+      color: rgba(130, 130, 130, 1);
+    }
+  }
+}
+
+.textBold {
+  font-family: Orbitron;
+  font-size: calc(88 / 19.2 * 1vw);
+  font-weight: 900;
+  line-height: calc(122 / 19.2 * 1vw);
+  text-align: left;
+  color: rgba(35, 40, 45, 1);
+  text-transform: uppercase;
+}
+
+.textWithBtns {
+  display: flex;
+  align-items: center;
+  column-gap: calc(47 / 19.2 * 1vw);
+  margin-left: calc(53 / 19.2 * 1vw);
+  > p {
+    font-family: Orbitron;
+    font-size: calc(88 / 19.2 * 1vw);
+    font-weight: 400;
+    line-height: calc(103 / 19.2 * 1vw);
+    text-align: left;
+    color: rgba(35, 40, 45, 1);
+    text-transform: uppercase;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: calc(9 / 19.2 * 1vw);
+    > button,
+    > div > button {
+      font-family: Raleway;
+      font-size: calc(20 / 19.2 * 1vw);
+      font-weight: 500;
+      line-height: calc(55 / 19.2 * 1vw);
+      text-align: left;
+      color: rgba(0, 0, 0, 1);
+      border-radius: calc(100 / 19.2 * 1vw);
+      border: none;
+      text-align: center;
+    }
+    > button {
+      padding: 0 calc(51.5 / 19.2 * 1vw);
+    }
+    > div > button {
+      padding: 0 calc(24.5 / 19.2 * 1vw);
+    }
+    > div {
+      display: flex;
+      align-items: center;
+      column-gap: calc(9 / 19.2 * 1vw);
+    }
+  }
+}
+
+.screen6ContainerMainRight {
+  width: calc(496 / 19.2 * 1vw);
+  height: 100vh;
+  padding: calc(20 / 19.2 * 1vw) 0;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  row-gap: calc(25 / 19.2 * 1vw);
+}
+
+.screen6ContainerMainRight > * {
+  min-height: 0;
+  flex-shrink: 0;
+}
+
+.rightBox {
+  width: 100%;
+  position: relative;
+  transition: all 0.1s linear;
+  &:active {
+    opacity: 0.8;
+  }
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.rightBox1,
+.rightBox4 {
+  height: calc(383 / 19.2 * 1vw);
+  background: url("../assets/images/screen6/exampleRight1.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.rightBoxTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(17 / 19.2 * 1vw) calc(17.36 / 19.2 * 1vw) 0
+    calc(17 / 19.2 * 1vw);
+  > p {
+    font-family: Raleway;
+    font-size: calc(20 / 19.2 * 1vw);
+    font-weight: 500;
+    line-height: calc(65 / 19.2 * 1vw);
+    text-align: left;
+    padding: 0 calc(36.5 / 19.2 * 1vw);
+    border-radius: calc(100 / 19.2 * 1vw);
+    background: rgba(255, 255, 255, 1);
+  }
+  > .socialBtns {
+    display: flex;
+    align-items: center;
+    column-gap: calc(11 / 19.2 * 1vw);
+    > button {
+      width: calc(54 / 19.2 * 1vw);
+      height: calc(54 / 19.2 * 1vw);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      > img {
+        width: calc(20 / 19.2 * 1vw);
+      }
+    }
+    > button:nth-child(2) {
+      > img {
+        width: calc(22 / 19.2 * 1vw);
+      }
+    }
+  }
+}
+
+.rightBoxBottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: calc(180 / 19.2 * 1vw);
+  padding-left: calc(17 / 19.2 * 1vw);
+  > p {
+    width: calc(329 / 19.2 * 1vw);
+    font-family: Raleway;
+    font-size: calc(22 / 19.1 * 1vw);
+    font-weight: 600;
+    line-height: calc(29 / 19.2 * 1vw);
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    padding: calc(24 / 19.2 * 1vw) calc(33 / 19.2 * 1vw);
+    background: rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur(15px);
+    border-radius: calc(20 / 19.2 * 1vw);
+  }
+}
+
+.rightBox2,
+.rightBox5 {
+  width: 100%;
+  height: calc(207 / 19.2 * 1vw);
+  background: url("../assets/images/screen6/rightBox2.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  padding: calc(23 / 19.2 * 1vw) calc(41 / 19.2 * 1vw) calc(20 / 19.2 * 1vw)
+    calc(12 / 19.2 * 1vw);
+  position: relative;
+}
+
+.rightBox2Text {
+  display: flex;
+  align-items: center;
+  > p {
+    font-family: Raleway;
+    font-size: calc(30 / 19.2 * 1vw);
+    font-weight: 600;
+    line-height: calc(35 / 19.2 * 1vw);
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+.rightBox2TextBg1 {
+  width: calc(139 / 19.2 * 1vw);
+  height: calc(138 / 19.2 * 1vw);
+  background: url("../assets/images/screen6/rightBox2TextBg1.png");
+  background-size: 96%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(5 / 19.2 * 1vw);
+}
+
+.rightBox2TextBg2 {
+  width: calc(128 / 19.2 * 1vw);
+  height: calc(127 / 19.2 * 1vw);
+  background: url("../assets/images/screen6/rightBox2TextBg2.png");
+  background-size: 95%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.circleBtnWithArrowIcon {
+  width: calc(61 / 19.2 * 1vw);
+  height: calc(61 / 19.2 * 1vw);
+  border-radius: 50%;
+  background: rgba(35, 40, 45, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  > img {
+    width: calc(23.4 / 19.2 * 1vw);
+  }
+}
+
+.rightBox3 {
+  height: calc(279 / 19.2 * 1vw);
+  background: url("../assets/images/screen6/rightBox3Bg.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: calc(17.13 / 19.2 * 1vw) 0 calc(22 / 19.2 * 1vw)
+    calc(17 / 19.2 * 1vw);
+  > p {
+    width: calc(314 / 19.2 * 1vw);
+    padding: calc(15 / 19.2 * 1vw) calc(36 / 19.2 * 1vw) calc(14 / 19.2 * 1vw)
+      calc(33 / 19.2 * 1vw);
+    border-radius: calc(20 / 19.2 * 1vw);
+    background: rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur(15px);
+    font-family: Raleway;
+    font-size: calc(22 / 19.2 * 1vw);
+    font-weight: 600;
+    line-height: calc(29 / 19.2 * 1vw);
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+  }
+  .rightBox3BottomText {
+    display: flex;
+    align-items: center;
+    column-gap: calc(30 / 19.2 * 1vw);
+    margin-top: calc(89 / 19.2 * 1vw);
+    > p {
+      font-family: Orbitron;
+      font-size: calc(56 / 19.2 * 1vw);
+      font-weight: 900;
+      line-height: calc(65 / 19.2 * 1vw);
+      text-align: left;
+      color: rgba(255, 255, 255, 1);
+    }
+    > button {
+      border: none;
+      border-radius: calc(100 / 19.2 * 1vw);
+      background: rgba(255, 255, 255, 1);
+      padding: 0 calc(36 / 19.2 * 1vw);
+      font-family: Raleway;
+      font-size: calc(20 / 19.2 * 1vw);
+      font-weight: 500;
+      line-height: calc(55 / 19.2 * 1vw);
+      text-align: left;
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+}
+
+.rightBox4 {
+  background: url("../assets/images/screen6/rightBox4Bg.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.rightBox5 {
+  > .rightBox2Text {
+    > .rightBox2TextBg1 {
+      > .rightBox2TextBg2 {
+        background: url("../assets/images/screen6/rightBox5Img.png");
+        background-size: 95%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+.rightBox6,
+.rightBox7 {
+  height: calc(384 / 19.2 * 1vw);
+  background: url("../assets/images/screen6/rightBox6.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > .rightBox2Text {
+    display: flex;
+    flex-direction: column;
+    row-gap: calc(29 / 19.2 * 1vw);
+    align-items: flex-start;
+    padding-left: calc(35 / 19.2 * 1vw);
+    padding-right: calc(24 / 19.2 * 1vw);
+    > div {
+      width: calc(437 / 19.2 * 1vw);
+      height: calc(121 / 19.2 * 1vw);
+      background: url("../assets/images/screen6/textBg.png");
+      display: flex;
+      align-items: center;
+      > p {
+        font-family: Raleway;
+        font-size: calc(40 / 19.2 * 1vw);
+        font-weight: 900;
+        line-height: calc(37 / 19.2 * 1vw);
+        text-align: left;
+        color: rgba(255, 255, 255, 1);
+        text-shadow: 10px 1px 20px #000;
+      }
+    }
+    > button {
+      font-family: Raleway;
+      font-size: calc(20 / 19.2 * 1vw);
+      font-weight: 500;
+      line-height: calc(55 / 19.2 * 1vw);
+      text-align: left;
+      color: rgba(0, 0, 0, 1);
+      background: rgba(255, 255, 255, 1);
+      border-radius: calc(100 / 19.2 * 1vw);
+      border: none;
+      padding: 0 calc(33.5 / 19.2 * 1vw);
+    }
+  }
+}
+
+.rightBox7 {
+  height: calc(384 / 19.2 * 1vw);
+  background: url("../assets/images/screen6/rightBox7.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
