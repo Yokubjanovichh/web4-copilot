@@ -46,6 +46,23 @@ document.addEventListener("DOMContentLoaded", () => {
           .screen5ContainerMainRight"
         );
 
+        const screen6Container = document.querySelectorAll(
+          ".screen6ContainerMainLeft,\
+          .screen6ContainerMainRight"
+        );
+
+        const screen7Container = document.querySelectorAll(
+          ".screen7ContainerMainTop,\
+          .screen7ContainerMainBottom"
+        );
+
+        const screen8Container = document.querySelectorAll(
+          ".screen8ContainerMainLeft,\
+          .creatorFirst, \
+          .creatorSecond,\
+          .creatorThird"
+        );
+
         if (entry.isIntersecting) {
           entry.target.classList.add("active");
 
@@ -101,14 +118,48 @@ document.addEventListener("DOMContentLoaded", () => {
           }
 
           if (entry.target === sections[4]) {
-            console.log("hello");
             screen5Container?.forEach((el) => {
-              console.log(el);
               el?.classList.remove("hidden");
               el?.classList.add("active");
             });
           } else {
             screen5Container?.forEach((el) => {
+              el?.classList.remove("active");
+              el?.classList.add("hidden");
+            });
+          }
+
+          if (entry.target === sections[5]) {
+            screen6Container?.forEach((el) => {
+              el?.classList.remove("hidden");
+              el?.classList.add("active");
+            });
+          } else {
+            screen6Container?.forEach((el) => {
+              el?.classList.remove("active");
+              el?.classList.add("hidden");
+            });
+          }
+
+          if (entry.target === sections[6]) {
+            screen7Container?.forEach((el) => {
+              el?.classList.remove("hidden");
+              el?.classList.add("active");
+            });
+          } else {
+            screen7Container?.forEach((el) => {
+              el?.classList.remove("active");
+              el?.classList.add("hidden");
+            });
+          }
+
+          if (entry.target === sections[7]) {
+            screen8Container?.forEach((el) => {
+              el?.classList.remove("hidden");
+              el?.classList.add("active");
+            });
+          } else {
+            screen8Container?.forEach((el) => {
               el?.classList.remove("active");
               el?.classList.add("hidden");
             });
