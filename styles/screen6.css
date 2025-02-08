@@ -9,7 +9,6 @@
 }
 
 .screen6ContainerMainLeftTop {
-  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -17,12 +16,12 @@
 .screen6ContainerMainLeft {
   width: calc(1267 / 19.2 * 1vw);
   height: 100%;
-  background: url("../assets/images/screen6/example1.png");
+  background: url("../assets/images/screen6/example1.webp");
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top left;
   padding-right: calc(41 / 19.2 * 1vw);
-  padding-bottom: calc(16.5 * 1vw);
+  padding-bottom: calc(16.5 / 19.2 * 1vw);
   transition: all 0.1s linear;
 }
 
@@ -195,7 +194,7 @@
 }
 
 .rightBox {
-  width: 100%;
+  width: calc(496 / 19.2 * 1vw);
   position: relative;
   transition: all 0.1s linear;
   &:active {
@@ -209,9 +208,9 @@
 .rightBox1,
 .rightBox4 {
   height: calc(383 / 19.2 * 1vw);
-  background: url("../assets/images/screen6/exampleRight1.png");
+  background: url("../assets/images/screen6/exampleRight1.webp");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   background-position: center;
 }
 
@@ -256,7 +255,6 @@
 }
 
 .rightBoxBottom {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: calc(180 / 19.2 * 1vw);
@@ -278,11 +276,10 @@
 
 .rightBox2,
 .rightBox5 {
-  width: 100%;
   height: calc(207 / 19.2 * 1vw);
-  background: url("../assets/images/screen6/rightBox2.png");
+  background: url("../assets/images/screen6/rightBox2.webp");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   background-position: center;
   padding: calc(23 / 19.2 * 1vw) calc(41 / 19.2 * 1vw) calc(20 / 19.2 * 1vw)
     calc(12 / 19.2 * 1vw);
@@ -305,8 +302,8 @@
 .rightBox2TextBg1 {
   width: calc(139 / 19.2 * 1vw);
   height: calc(138 / 19.2 * 1vw);
-  background: url("../assets/images/screen6/rightBox2TextBg1.png");
-  background-size: 96%;
+  background: url("../assets/images/screen6/rightBox2TextBg1.webp");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
@@ -318,8 +315,8 @@
 .rightBox2TextBg2 {
   width: calc(128 / 19.2 * 1vw);
   height: calc(127 / 19.2 * 1vw);
-  background: url("../assets/images/screen6/rightBox2TextBg2.png");
-  background-size: 95%;
+  background: url("../assets/images/screen6/rightBox2TextBg2.webp");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -342,7 +339,7 @@
 
 .rightBox3 {
   height: calc(279 / 19.2 * 1vw);
-  background: url("../assets/images/screen6/rightBox3Bg.png");
+  background: url("../assets/images/screen6/rightBox3Bg.webp");
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -391,7 +388,7 @@
 }
 
 .rightBox4 {
-  background: url("../assets/images/screen6/rightBox4Bg.png");
+  background: url("../assets/images/screen6/rightBox4Bg.webp");
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -401,7 +398,7 @@
   > .rightBox2Text {
     > .rightBox2TextBg1 {
       > .rightBox2TextBg2 {
-        background: url("../assets/images/screen6/rightBox5Img.png");
+        background: url("../assets/images/screen6/rightBox5Img.webp");
         background-size: 95%;
         background-position: center;
         background-repeat: no-repeat;
@@ -413,7 +410,7 @@
 .rightBox6,
 .rightBox7 {
   height: calc(384 / 19.2 * 1vw);
-  background: url("../assets/images/screen6/rightBox6.png");
+  background: url("../assets/images/screen6/rightBox6.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -430,7 +427,7 @@
     > div {
       width: calc(437 / 19.2 * 1vw);
       height: calc(121 / 19.2 * 1vw);
-      background: url("../assets/images/screen6/textBg.png");
+      background: url("../assets/images/screen6/textBg.webp");
       display: flex;
       align-items: center;
       > p {
@@ -460,7 +457,7 @@
 
 .rightBox7 {
   height: calc(384 / 19.2 * 1vw);
-  background: url("../assets/images/screen6/rightBox7.png");
+  background: url("../assets/images/screen6/rightBox7.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -486,4 +483,270 @@
 .screen6ContainerMainRight.hidden {
   animation: slide-out-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
   animation-delay: 0.5s;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 440px) {
+  .screen6ContainerMain {
+    padding-left: calc(10 / 5 * 1vw);
+    padding-right: calc(10 / 5 * 1vw);
+    padding: calc(10 / 5 * 1vw) calc(10 / 5 * 1vw) calc(20 / 5 * 1vw)
+      calc(10 / 5 * 1vw);
+    flex-direction: column;
+  }
+
+  .screen6ContainerMainLeft {
+    width: 100%;
+    height: 47%;
+    background-size: 100% 100%;
+    padding-right: calc(10 / 5 * 1vw);
+    padding-bottom: calc(16.5 / 5 * 1vw);
+  }
+
+  .screen6ContainerMainLeftInsideLeft {
+    padding-left: calc(12 / 5 * 1vw);
+    row-gap: calc(30 / 5 * 1vw);
+    > img {
+      width: calc(65 / 5 * 1vw);
+    }
+    > .box {
+      width: calc(150 / 5 * 1vw);
+      padding: calc(11 / 5 * 1vw) calc(8 / 5 * 1vw) calc(11 / 5 * 1vw)
+        calc(11 / 5 * 1vw);
+      border-radius: calc(8 / 5 * 1vw);
+      margin-left: 0;
+    }
+    .boxTextTop,
+    .boxTextBottom {
+      row-gap: calc(10 / 19.2 * 1vw);
+      > p:nth-child(1) {
+        font-size: calc(14 / 5 * 1vw);
+        line-height: calc(18 / 5 * 1vw);
+      }
+      > p:nth-child(2) {
+        font-size: calc(6 / 5 * 1vw);
+        line-height: calc(9 / 5 * 1vw);
+      }
+    }
+    .boxTextBottom {
+      margin-top: calc(10 / 5 * 1vw);
+    }
+  }
+
+  .screen6ContainerMainLeftInsideright {
+    width: calc(120 / 5 * 1vw);
+    height: max-content;
+    row-gap: calc(10 / 5 * 1vw);
+    padding: calc(11 / 5 * 1vw) calc(8 / 5 * 1vw) calc(11 / 5 * 1vw)
+      calc(11 / 5 * 1vw);
+    border-radius: calc(8 / 5 * 1vw);
+    margin-top: calc(7 / 5 * 1vw);
+    > p:nth-child(1) {
+      font-size: calc(10 / 5 * 1vw);
+      line-height: calc(15 / 5 * 1vw);
+    }
+    > p:nth-child(2) {
+      font-size: calc(7 / 5 * 1vw);
+      line-height: calc(10 / 5 * 1vw);
+    }
+  }
+
+  .screen6ContainerMainLeftBottom {
+    margin-top: calc(70 / 5 * 1vw);
+    .example3 {
+      display: flex;
+      align-items: center;
+      column-gap: calc(14 / 5 * 1vw);
+      > button {
+        width: calc(70 / 5 * 1vw);
+        height: calc(35 / 5 * 1vw);
+        background-size: 100% 100%;
+      }
+      > p {
+        width: calc(100 / 5 * 1vw);
+        font-size: calc(10 / 5 * 1vw);
+        line-height: calc(15 / 5 * 1vw);
+      }
+    }
+  }
+
+  .textBold {
+    font-size: calc(33 / 5 * 1vw);
+    line-height: calc(50 / 5 * 1vw);
+  }
+
+  .textWithBtns {
+    column-gap: calc(40 / 5 * 1vw);
+    margin-left: calc(25 / 5 * 1vw);
+    > p {
+      font-size: calc(30 / 5 * 1vw);
+      line-height: calc(50 / 5 * 1vw);
+    }
+    > div {
+      row-gap: calc(5 / 5 * 1vw);
+      > button,
+      > div > button {
+        font-size: calc(10 / 5 * 1vw);
+        line-height: calc(30 / 5 * 1vw);
+        border-radius: calc(50 / 5 * 1vw);
+      }
+      > button {
+        padding: 0 calc(15 / 5 * 1vw);
+      }
+      > div > button {
+        padding: 0 calc(15 / 5 * 1vw);
+      }
+      > div {
+        column-gap: calc(4 / 5 * 1vw);
+      }
+    }
+  }
+
+  .screen6ContainerMainRight {
+    width: 100%;
+    height: max-content;
+    padding: calc(20 / 5 * 1vw) 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: calc(15 / 5 * 1vw);
+  }
+
+  .rightBox1,
+  .rightBox4 {
+    width: calc(196 / 5 * 1vw);
+    height: calc(150 / 5 * 1vw);
+    background-size: 100% 100%;
+  }
+
+  .rightBoxTop {
+    padding: calc(7 / 5 * 1vw) calc(17.36 / 5 * 1vw) 0 calc(7 / 5 * 1vw);
+    > p {
+      font-size: calc(8 / 5 * 1vw);
+      line-height: calc(22 / 5 * 1vw);
+      padding: 0 calc(16 / 5 * 1vw);
+    }
+    > .socialBtns {
+      column-gap: calc(5 / 5 * 1vw);
+      > button {
+        width: calc(24 / 5 * 1vw);
+        height: calc(24 / 5 * 1vw);
+        border-radius: 50%;
+        > img {
+          width: calc(12 / 5 * 1vw);
+        }
+      }
+      > button:nth-child(2) {
+        > img {
+          width: calc(15 / 5 * 1vw);
+        }
+      }
+    }
+  }
+
+  .rightBoxBottom {
+    margin-top: calc(50 / 5 * 1vw);
+    padding-left: calc(7 / 5 * 1vw);
+    > p {
+      width: calc(110 / 5 * 1vw);
+      font-size: calc(10 / 5 * 1vw);
+      line-height: calc(15 / 5 * 1vw);
+      padding: calc(7 / 5 * 1vw) calc(9 / 5 * 1vw);
+      border-radius: calc(5 / 5 * 1vw);
+    }
+  }
+
+  .circleBtnWithArrowIcon {
+    width: calc(25 / 5 * 1vw);
+    height: calc(25 / 5 * 1vw);
+    > img {
+      width: calc(10 / 5 * 1vw);
+    }
+  }
+
+  .rightBox2,
+  .rightBox5 {
+    width: calc(196 / 5 * 1vw);
+    height: calc(80 / 5 * 1vw);
+    background-size: 100% 100%;
+    display: flex;
+    column-gap: calc(10 / 5 * 1v);
+    padding: calc(10 / 5 * 1vw) calc(10 / 5 * 1vw) calc(10 / 5 * 1vw)
+      calc(10 / 5 * 1vw);
+  }
+
+  .rightBox2Text {
+    > p {
+      font-size: calc(9 / 5 * 1vw);
+      line-height: calc(12 / 5 * 1vw);
+    }
+  }
+  .rightBox2TextBg1 {
+    width: calc(59 / 5 * 1vw);
+    height: calc(47 / 5 * 1vw);
+    background-size: 100% 100%;
+    padding: calc(3 / 5 * 1vw);
+  }
+
+  .rightBox2TextBg2 {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+  }
+
+  .rightBox3 {
+    width: calc(196 / 5 * 1vw);
+    height: calc(129 / 5 * 1vw);
+    background-size: 100% 100%;
+    padding: calc(7.13 / 5 * 1vw) 0 calc(3 / 5 * 1vw) calc(7 / 5 * 1vw);
+    > p {
+      width: calc(100 / 5 * 1vw);
+      padding: calc(5 / 5 * 1vw) calc(6 / 5 * 1vw) calc(4 / 5 * 1vw)
+        calc(5 / 5 * 1vw);
+      border-radius: calc(5 / 5 * 1vw);
+      font-size: calc(9 / 5 * 1vw);
+      line-height: calc(12 / 5 * 1vw);
+    }
+    .rightBox3BottomText {
+      column-gap: calc(10 / 5 * 1vw);
+      margin-top: calc(55 / 5 * 1vw);
+      > p {
+        font-size: calc(20 / 5 * 1vw);
+        line-height: calc(30 / 5 * 1vw);
+      }
+      > button {
+        padding: 0 calc(10 / 5 * 1vw);
+        font-size: calc(8 / 5 * 1vw);
+        line-height: calc(20 / 5 * 1vw);
+      }
+    }
+  }
+
+  .rightBox6,
+  .rightBox7 {
+    width: calc(196 / 5 * 1vw);
+    height: calc(150 / 5 * 1vw);
+    background-size: 100% 100%;
+    > .rightBox2Text {
+      row-gap: calc(19 / 5 * 1vw);
+      padding-left: calc(15 / 5 * 1vw);
+      padding-right: calc(12 / 5 * 1vw);
+      > div {
+        width: 100%;
+        height: calc(70 / 5 * 1vw);
+        > p {
+          font-size: calc(17 / 5 * 1vw);
+          line-height: calc(13 / 5 * 1vw);
+          text-shadow: 10px 1px 20px #000;
+        }
+      }
+      > button {
+        font-size: calc(10 / 5 * 1vw);
+        line-height: calc(25 / 5 * 1vw);
+        padding: 0 calc(14 / 5 * 1vw);
+      }
+    }
+  }
 }

@@ -1,10 +1,9 @@
 .screen7ContainerMain {
-  width: 100%;
   height: 100vh;
-  background: url("../assets/images/screen7/screen7MainBg.png");
+  background: url("../assets/images/screen7/screen7MainBg.webp");
   background-repeat: no-repeat;
   background-position: top left;
-  background-size: 100%;
+  background-size: 100% 100%;
   padding: calc(38 / 19.2 * 1vw) calc(90 / 19.2 * 1vw) 0 calc(90 / 19.2 * 1vw);
   overflow: hidden;
 }
@@ -44,7 +43,7 @@
       align-items: center;
       column-gap: calc(30 / 19.2 * 1vw);
       > p:last-child {
-        border: 1.1px solid rgba(0, 0, 0, 1);
+        border: calc(1.1 / 19.2 * 1vw) solid rgba(0, 0, 0, 1);
         border-radius: calc(110 / 19.2 * 1vw);
         padding: 0 calc(20 / 19.2 * 1vw);
       }
@@ -68,7 +67,7 @@
 .screen7ContainerMainTopRight {
   width: calc(839 / 19.2 * 1vw);
   height: calc(614 / 19.2 * 1vw);
-  background: url("../assets/images/screen7/screen7ContainerMainTopRightImg.png");
+  background: url("../assets/images/screen7/screen7ContainerMainTopRightImg.webp");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -100,7 +99,6 @@
 }
 
 .screen7ContainerMainBottom {
-  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -108,7 +106,7 @@
 .screen7ContainerMainBottomLeft {
   width: calc(833 / 19.2 * 1vw);
   height: calc(508 / 19.2 * 1vw);
-  background: url("../assets/images/screen7/screen7ContainerMainBottomLeftBg.png");
+  background: url("../assets/images/screen7/screen7ContainerMainBottomLeftBg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -118,8 +116,8 @@
 .screen7ContainerMainBottomLeftInside {
   width: 100%;
   height: 100%;
-  background: url("../assets/images/screen7/robotHandLeft.png"),
-    url("../assets/images/screen7/humanHandRight.png");
+  background: url("../assets/images/screen7/robotHandLeft.webp"),
+    url("../assets/images/screen7/humanHandRight.webp");
   background-position: top left, bottom right;
   background-size: calc(500 / 19.2 * 1vw) calc(342 / 19.2 * 1vw),
     calc(430 / 19.2 * 1vw) calc(400 / 19.2 * 1vw);
@@ -139,7 +137,7 @@
     > .screen7ContainerMainBottomLeftInsideWatchIntro {
       width: calc(277 / 19.2 * 1vw);
       height: calc(202 / 19.2 * 1vw);
-      background: url("../assets/images/screen7/watchIntro.png");
+      background: url("../assets/images/screen7/watchIntro.webp");
       background-repeat: no-repeat;
       background-size: 100%;
       background-position: center;
@@ -267,7 +265,7 @@
       > button {
         width: calc(220 / 19.2 * 1vw);
         padding: calc(10 / 19.2 * 1vw) calc(27 / 19.2 * 1vw);
-        border: 1px solid rgba(43, 43, 43, 1);
+        border: calc(1 / 19.2 * 1vw) solid rgba(43, 43, 43, 1);
         border-radius: calc(100 / 19.2 * 1vw);
         display: flex;
         align-items: center;
@@ -316,4 +314,198 @@
 .screen7ContainerMainBottom.hidden {
   animation: slide-out-bottom 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
   animation-delay: 0.5s;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 440px) {
+  .screen7ContainerMain {
+    height: 100vh;
+    background-size: 100% 100%;
+    padding: calc(20 / 5 * 1vw) calc(10 / 5 * 1vw) calc(10 / 5 * 1vw)
+      calc(10 / 5 * 1vw);
+  }
+
+  .screen7ContainerMainTop {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: calc(20 / 5 * 1vw);
+  }
+
+  .screen7ContainerMainTopLeft {
+    font-size: calc(41 / 5 * 1vw);
+    line-height: calc(58 / 5 * 1vw);
+    row-gap: calc(5 / 5 * 1vw);
+    > div:first-child {
+      > div {
+        column-gap: calc(10 / 5 * 1vw);
+      }
+    }
+    > div:last-child {
+      column-gap: calc(10 / 5 * 1vw);
+      margin-left: calc(21 / 5 * 1vw);
+      > div {
+        column-gap: calc(10 / 5 * 1vw);
+        > p:last-child {
+          border: calc(1.1 / 5 * 1vw) solid rgba(0, 0, 0, 1);
+          padding: 0 calc(20 / 5 * 1vw);
+        }
+      }
+    }
+  }
+  .smalText {
+    font-size: calc(8 / 5 * 1vw);
+    line-height: calc(12 / 5 * 1vw);
+    > sup {
+      font-size: calc(6 / 5 * 1vw);
+    }
+  }
+
+  .screen7ContainerMainTopRight {
+    width: 100%;
+    height: calc(300 / 5 * 1vw);
+    background-size: 100% 100%;
+    padding: calc(15 / 5 * 1vw) calc(14 / 5 * 1vw) 0 0;
+  }
+
+  .screen7ContainerMainTopRight > button {
+    width: calc(140 / 5 * 1vw);
+    column-gap: calc(21 / 5 * 1vw);
+    background: rgba(255, 255, 255, 0.66);
+    border: calc(2.42 / 5 * 1vw) solid rgba(255, 255, 255, 1);
+    padding: calc(10 / 5 * 1vw) calc(50 / 5 * 1vw);
+    border-radius: calc(10 / 5 * 1vw);
+    > p {
+      width: 100%;
+      font-size: calc(12 / 5 * 1vw);
+      font-weight: 500;
+      line-height: calc(18 / 5 * 1vw);
+      text-align: left;
+      color: rgba(14, 14, 14, 1);
+    }
+  }
+
+  .screen7ContainerMainBottom {
+    margin-top: calc(20 / 5 * 1vw);
+    flex-direction: column;
+    row-gap: calc(20 / 5 * 1vw);
+  }
+
+  .screen7ContainerMainBottomLeft {
+    margin-top: 0;
+    width: 100%;
+    height: calc(300 / 5 * 1vw);
+    background-size: 100% 100%;
+  }
+
+  .screen7ContainerMainBottomLeftInside {
+    background-size: calc(300 / 5 * 1vw) calc(180 / 5 * 1vw),
+      calc(250 / 5 * 1vw) calc(200 / 5 * 1vw);
+    background-repeat: no-repeat;
+
+    > img {
+      width: calc(120 / 5 * 1vw);
+      height: calc(120 / 5 * 1vw);
+      margin-left: calc(210 / 5 * 1vw);
+      margin-top: calc(41 / 5 * 1vw);
+    }
+
+    > .screen7ContainerMainBottomLeftInsideWatchIntroWrapper {
+      column-gap: calc(30 / 5 * 1vw);
+      > .screen7ContainerMainBottomLeftInsideWatchIntro {
+        width: calc(160 / 5 * 1vw);
+        height: calc(120 / 5 * 1vw);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        margin-top: 0;
+        margin-left: calc(90 / 5 * 1vw);
+        padding-left: calc(11 / 5 * 1vw);
+        > p:first-child {
+          font-size: calc(8 / 5 * 1vw);
+          line-height: calc(13 / 5 * 1vw);
+          padding: calc(5 / 5 * 1vw) calc(20 / 5 * 1vw);
+        }
+        > img:nth-child(2) {
+          width: calc(18 / 5 * 1vw);
+          margin-top: calc(10 / 5 * 1vw);
+        }
+        > .screen7ContainerMainBottomLeftInsideWatchIntroText {
+          margin-top: calc(13 / 5 * 1vw);
+          row-gap: calc(7 / 5 * 1vw);
+          > button {
+            width: calc(100 / 5 * 1vw);
+            padding: calc(6 / 5 * 1vw) calc(12 / 5 * 1vw);
+            font-size: calc(7 / 5 * 1vw);
+            line-height: calc(17 / 5 * 1vw);
+            border: calc(1 / 5 * 1vw) solid rgba(43, 43, 43, 1);
+          }
+          > p {
+            width: calc(102 / 5 * 1vw);
+            font-size: calc(9 / 5 * 1vw);
+            font-weight: 400;
+            line-height: calc(12 / 5 * 1vw);
+          }
+        }
+      }
+    }
+
+    .navigateBtns {
+      column-gap: calc(5 / 5 * 1vw);
+      > button {
+        width: calc(22 / 5 * 1vw);
+        height: calc(22 / 5 * 1vw);
+        border: calc(1 / 5 * 1vw) solid rgba(255, 255, 255, 1);
+        > img {
+          width: calc(13 / 5 * 1vw);
+        }
+      }
+    }
+  }
+
+  .screen7ContainerMainBottomRight {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: calc(10 / 5 * 1vw);
+    row-gap: calc(20 / 5 * 1vw);
+    margin-top: calc(19 / 5 * 1vw);
+    .screen7ContainerMainBottomRightItem {
+      column-gap: calc(15 / 5 * 1vw);
+      .itemLeft {
+        > p {
+          font-size: calc(15 / 5 * 1vw);
+          line-height: calc(20 / 5 * 1vw);
+          color: rgba(35, 40, 45, 1);
+        }
+        > img {
+          width: calc(51 / 5 * 1vw);
+          height: calc(52 / 5 * 1vw);
+        }
+      }
+      .itemRight {
+        row-gap: calc(9 / 5 * 1vw);
+        > p {
+          font-size: calc(12 / 5 * 1vw);
+          line-height: calc(18 / 5 * 1vw);
+        }
+        > button {
+          width: calc(130 / 5 * 1vw);
+          padding: calc(5 / 5 * 1vw) calc(17 / 5 * 1vw);
+          border: calc(1 / 5 * 1vw) solid rgba(43, 43, 43, 1);
+          column-gap: calc(5 / 5 * 1vw);
+          > p {
+            font-size: calc(8 / 5 * 1vw);
+            line-height: calc(12 / 5 * 1vw);
+          }
+          > img {
+            width: calc(12 / 5 * 1vw);
+          }
+        }
+      }
+    }
+  }
 }

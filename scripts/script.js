@@ -204,25 +204,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   rightBox1.addEventListener("click", function () {
     leftContainer.style.backgroundImage =
-      "url('../assets/images/screen6/example2.png')";
+      "url('../assets/images/screen6/example2.webp')";
   });
   rightBox3.addEventListener("click", function () {
     leftContainer.style.backgroundImage =
-      "url('../assets/images/screen6/example4.png')";
+      "url('../assets/images/screen6/example4.webp')";
   });
 
   rightBox4.addEventListener("click", function () {
     leftContainer.style.backgroundImage =
-      "url('../assets/images/screen6/example1.png')";
+      "url('../assets/images/screen6/example1.webp')";
   });
 
   rightBox6.addEventListener("click", function () {
     leftContainer.style.backgroundImage =
-      "url('../assets/images/screen6/example4.png')";
+      "url('../assets/images/screen6/example4.webp')";
   });
 
   rightBox7.addEventListener("click", function () {
     leftContainer.style.backgroundImage =
-      "url('../assets/images/screen6/example5.png')";
+      "url('../assets/images/screen6/example5.webp')";
   });
 });

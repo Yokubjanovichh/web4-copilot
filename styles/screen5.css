@@ -2,7 +2,6 @@
 @import url("./animation.css");
 
 .screen5ContainerMain {
-  width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -30,8 +29,8 @@
   display: flex;
   align-items: center;
   column-gap: calc(4 / 19.2 * 1vw);
-  background: url("../assets/images/screen5/01BgImg.png");
-  background-size: 100%;
+  background: url("../assets/images/screen5/01BgImg.webp");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   padding: calc(14 / 19.2 * 1vw) calc(16 / 19.2 * 1vw) calc(17 / 19.2 * 1vw)
     calc(21 / 19.2 * 1vw);
@@ -76,8 +75,8 @@
 .screen5ContainerMainLeftContainer {
   display: flex;
   > img {
-    width: calc(50 / 19.2 * 1vw);
-    height: calc(50 / 19.2 * 1vw);
+    width: calc(60 / 19.2 * 1vw);
+    height: calc(60 / 19.2 * 1vw);
   }
 }
 
@@ -132,7 +131,7 @@
 }
 
 .screen5ContainerMainLeftBox2 {
-  background: url("../assets/images/screen5/02BgImg.png");
+  background: url("../assets/images/screen5/02BgImg.webp");
   background-size: 100%;
 }
 
@@ -140,7 +139,7 @@
   width: calc(833 / 19.2 * 1vw);
   padding: calc(74 / 19.2 * 1vw) calc(50 / 19.2 * 1vw) calc(63 / 19.2 * 1vw)
     calc(49 / 19.2 * 1vw);
-  border: 1px solid rgba(171, 171, 171, 1);
+  border: calc(1 / 19.2 * 1vw) solid rgba(171, 171, 171, 1);
   border-radius: calc(50 / 19.2 * 1vw);
 }
 
@@ -253,17 +252,12 @@
   display: flex;
   flex-direction: column;
   row-gap: calc(23.5 / 19.2 * 1vw);
-}
-
-.newReleaseBottom {
   margin-top: calc(10 / 19.2 * 1vw);
   > .line {
-    width: 100%;
     height: calc(1 / 19.2 * 1vw);
     background: rgba(165, 165, 165, 1);
   }
   .globus {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -348,4 +342,207 @@
 .screen5ContainerMainRight.hidden {
   animation: slide-out-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
   animation-delay: 0.5s;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 440px) {
+  .screen5ContainerMain {
+    height: 100vh;
+    flex-direction: column;
+    row-gap: calc(38 / 5 * 1vw);
+    padding: calc(10 / 5 * 1vw) calc(20 / 5 * 1vw) calc(10 / 5 * 1vw)
+      calc(15 / 5 * 1vw);
+  }
+
+  .screen5ContainerMainLeft {
+    width: 100%;
+    height: calc(420 / 5 * 1vw);
+    background-size: 100% 100%;
+    border-radius: calc(20 / 5 * 1vw);
+    padding-top: calc(16 / 5 * 1vw);
+    padding-bottom: calc(29 / 5 * 1vw);
+    padding-left: calc(20 / 5 * 1vw);
+  }
+
+  .screen5ContainerMainLeftBox {
+    width: calc(180 / 5 * 1vw);
+    height: calc(80 / 5 * 1vw);
+    column-gap: calc(4 / 5 * 1vw);
+    background-size: 100% 100%;
+    padding: calc(5 / 5 * 1vw) calc(6 / 5 * 1vw) calc(7 / 5 * 1vw)
+      calc(10 / 5 * 1vw);
+    > img {
+      width: calc(65 / 5 * 1vw);
+      height: calc(66 / 5 * 1vw);
+    }
+  }
+
+  .screen5ContainerMainLeftBoxText {
+    > p {
+      font-size: calc(20 / 5 * 1vw);
+      line-height: calc(27 / 5 * 1vw);
+    }
+    > div {
+      margin-top: calc(3 / 5 * 1vw);
+      > p:nth-child(1) {
+        font-size: calc(8 / 5 * 1vw);
+        line-height: calc(12 / 5 * 1vw);
+      }
+      > p:nth-child(2) {
+        font-size: calc(6 / 5 * 1vw);
+        line-height: calc(10 / 5 * 1vw);
+      }
+    }
+  }
+
+  .screen5ContainerMainLeftContainer:nth-child(1) {
+    column-gap: calc(4 / 5 * 1vw);
+    > img {
+      margin-top: calc(78 / 5 * 1vw);
+    }
+  }
+
+  .screen5ContainerMainLeftContainerTetx2 {
+    margin-top: calc(38 / 5 * 1vw);
+    > p {
+      font-size: calc(12 / 5 * 1vw);
+    }
+  }
+
+  .screen5ContainerMainLeftContainerTetx3 {
+    margin-top: calc(105 / 5 * 1vw);
+    > p {
+      font-size: calc(12 / 5 * 1vw);
+    }
+  }
+
+  .screen5ContainerMainLeftContainerBottom {
+    margin-top: calc(70 / 5 * 1vw);
+    margin-right: calc(5 / 5 * 1vw);
+    column-gap: calc(4 / 5 * 1vw);
+    > img {
+      margin-top: calc(-12 / 5 * 1vw);
+    }
+  }
+
+  .screen5ContainerMainRight {
+    width: 100%;
+  }
+
+  .screen5ContainerMainRightTop {
+    width: 100%;
+    padding: calc(24 / 5 * 1vw) calc(20 / 5 * 1vw) calc(33 / 5 * 1vw)
+      calc(12 / 5 * 1vw);
+    border: calc(1 / 5 * 1vw) solid rgba(171, 171, 171, 1);
+    border-radius: calc(20 / 5 * 1vw);
+  }
+
+  .screen5ContainerMainRightTopTitle {
+    font-size: calc(38 / 5 * 1vw);
+    line-height: calc(43 / 5 * vw);
+    > div {
+      column-gap: calc(7 / 5 * 1vw);
+      > img {
+        width: calc(200 / 5 * 1vw);
+        height: calc(50 / 5 * 1vw);
+      }
+    }
+    margin-bottom: calc(17 / 5 * 1vw);
+  }
+
+  .screen5ContainerMainRightTop > p:nth-child(2) {
+    font-size: calc(16 / 5 * 1vw);
+    line-height: calc(22 / 5 * 1vw);
+  }
+
+  .screen5ContainerMainRightTopBtns {
+    margin-top: calc(22 / 5 * 1vw);
+    > button {
+      padding: calc(16 / 5 * 1vw) calc(39 / 5 * 1vw);
+      font-size: calc(15 / 5 * 1vw);
+      line-height: calc(20 / 5 * 1vw);
+    }
+    > .socialBtns {
+      > button {
+        width: calc(30 / 5 * 1vw);
+        height: calc(30 / 5 * 1vw);
+      }
+      > button:nth-child(1) {
+        > img {
+          width: calc(12 / 5 * 1vw);
+        }
+      }
+      > button:nth-child(2) {
+        margin-left: calc(-5 / 5 * 1vw);
+        > img {
+          width: calc(18 / 5 * 1vw);
+        }
+      }
+    }
+  }
+  .screen5ContainerMainRightBottom {
+    padding-left: 0;
+    margin-top: calc(20 / 5 * 1vw);
+    .newRelease {
+      > .newReleaseText {
+        > p {
+          font-size: calc(13 / 5 * 1vw);
+          line-height: calc(20 / 5 * 1vw);
+        }
+        > p:nth-child(2) {
+          width: calc(250 / 5 * 1vw);
+          margin-top: calc(10 / 5 * 1vw);
+          font-size: calc(25 / 5 * 1vw);
+          line-height: calc(30 / 5 * 1vw);
+        }
+      }
+      > img {
+        width: calc(120 / 5 * 1vw);
+      }
+    }
+  }
+
+  .newReleaseBottom {
+    margin-top: calc(15 / 5 * 1vw);
+    > .line {
+      height: calc(1 / 5 * 1vw);
+    }
+    row-gap: calc(16 / 5 * 1vw);
+    .globusLeft {
+      column-gap: calc(15 / 5 * 1vw);
+      > div:nth-child(1) {
+        width: calc(40 / 5 * 1vw);
+        height: calc(40 / 5 * 1vw);
+        border-radius: 50%;
+        > img {
+          width: calc(30 / 5 * 1vw);
+        }
+      }
+      > p {
+        width: calc(200 / 5 * 1vw);
+        font-size: calc(10 / 5 * 1vw);
+        line-height: calc(15 / 5 * 1vw);
+        > sup {
+          font-size: calc(8 / 5 * 1vw);
+          line-height: calc(12 / 5 * 1vw);
+        }
+      }
+    }
+    .globusRight {
+      column-gap: calc(29 / 5 * 1vw);
+      > p:nth-child(1) {
+        font-size: calc(13 / 5 * 1vw);
+        line-height: calc(17 / 5 * 1vw);
+      }
+      > div {
+        column-gap: calc(3 / 5 * 1vw);
+        > span {
+          width: calc(6 / 5 * 1vw);
+          height: calc(6 / 5 * 1vw);
+          border: calc(1 / 5 * 1vw) solid rgba(35, 40, 45, 1);
+        }
+      }
+    }
+  }
 }
