@@ -23,12 +23,11 @@ button {
 .header {
   height: 200vh;
   overflow: hidden;
-  overflow-x: hidden;
 }
 
 .headerTop {
   height: 100vh;
-  background: url("../assets/images/header/headerTopBg.png");
+  background: url("../assets/images/header/headerTopBg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,7 +36,7 @@ button {
 
 .headerTopInside {
   height: 100%;
-  background: url(../assets/images/header/headerTopInside.png);
+  background: url(../assets/images/header/headerTopInside.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -183,7 +182,7 @@ button {
   width: calc(220 / 19.2 * 1vw);
   height: calc(180 / 19.2 * 1vw);
   position: relative;
-  background: url(../assets/images/header/topBodyHeaderBoxBg.png);
+  background: url(../assets/images/header/topBodyHeaderBoxBg.webp);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -394,8 +393,8 @@ button {
 .mineGifFooter {
   width: calc(687 / 19.2 * 1vw);
   height: calc(345 / 19.2 * 1vw);
-  background: url(../assets/images/header/mineBottom1.png),
-    url(../assets/images/header/mineBottom2.png);
+  background: url(../assets/images/header/mineBottom1.webp),
+    url(../assets/images/header/mineBottom2.webp);
   background-position: center, calc(85 / 19.2 * 1vw) bottom;
   background-size: calc(670 / 19.2 * 1vw) calc(330 / 19.2 * 1vw),
     calc(531 / 19.2 * 1vw) calc(27 / 19.2 * 1vw);
@@ -406,81 +405,84 @@ button {
   z-index: 3;
 }
 
-.headerTopInsideBodyTitleLeft.hidden {
-  animation: slide-out-left 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
+@media only screen and (min-width: 1000px) {
+  .headerTopInsideBodyTitleLeft.hidden {
+    animation: slide-out-left 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
 
-.headerTopInsideBodyTitleLeft.active {
-  animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
+  .headerTopInsideBodyTitleLeft.active {
+    animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
 
-.headerTopInsideBodyTitleRight.hidden {
-  animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
+  .headerTopInsideBodyTitleRight.hidden {
+    animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
 
-.headerTopInsideBodyTitleRight.active {
-  animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
+  .headerTopInsideBodyTitleRight.active {
+    animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
 
-.watchIntro.hidden {
-  animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
+  .watchIntro.hidden {
+    animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
 
-.watchIntro.active {
-  animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
+  .watchIntro.active {
+    animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
 
-.bigStyledTextLeft.hidden {
-  animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-.bigStyledTextLeft.active {
-  animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
+  .bigStyledTextLeft.hidden {
+    animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
+  .bigStyledTextLeft.active {
+    animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
 
-.bigStyledTextRight.hidden {
-  animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-.bigStyledTextRight.active {
-  animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
+  .bigStyledTextRight.hidden {
+    animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
+  .bigStyledTextRight.active {
+    animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
 
-.headerTopInsideScroll.hidden {
-  animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-.headerTopInsideScroll.active {
-  animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
+  .headerTopInsideScroll.hidden {
+    animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
+  .headerTopInsideScroll.active {
+    animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
 
-.mineGifFooter.hidden {
-  animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-.mineGifFooter.active {
-  animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
+  .mineGifFooter.hidden {
+    animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
+  .mineGifFooter.active {
+    animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
 
-.mineInfo1.hidden,
-.mineInfo2.hidden {
-  animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-.mineInfo1.active,
-.mineInfo2.active {
-  animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
+  .mineInfo1.hidden,
+  .mineInfo2.hidden {
+    animation: slide-out-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
+  .mineInfo3.hidden,
+  .mineInfo4.hidden {
+    animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
 
-.mineInfo3.hidden,
-.mineInfo4.hidden {
-  animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-.mineInfo3.active,
-.mineInfo4.active {
-  animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  .mineInfo1.active,
+  .mineInfo2.active {
+    animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  .mineInfo3.active,
+  .mineInfo4.active {
+    animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
 }
 
 /* header bottom */
 
 .headerBottom {
   height: 100vh;
-  background: url(../assets/images/header/headerBottomFirst.png);
+  background: url(../assets/images/header/headerBottomFirst.webp);
   background-repeat: no-repeat;
   background-size: 100% 99%;
   background-position: bottom;
@@ -509,7 +511,7 @@ button {
   height: 100vh;
   position: absolute;
   top: 0;
-  background: url(../assets/images/header/headerBottom.png);
+  background: url(../assets/images/header/headerBottom.webp);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100% 100%;
@@ -550,8 +552,6 @@ button {
     height: calc(252.71 / 19.2 * 1vw);
     margin-left: calc(120 / 19.2 * 1vw);
   }
-  animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.2s;
 }
 
 .mineInfo2 {
@@ -562,8 +562,6 @@ button {
     height: calc(220.5 / 19.2 * 1vw);
     margin-left: calc(64.6 / 19.2 * 1vw);
   }
-  animation: slide-in-blurred-left 1s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.2s;
 }
 
 .mineInfo3 {
@@ -574,8 +572,6 @@ button {
     height: calc(220.5 / 19.2 * 1vw);
     margin-right: calc(67.7 / 19.2 * 1vw);
   }
-  animation: slide-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.2s;
 }
 
 .mineInfo4 {
@@ -586,8 +582,6 @@ button {
     height: calc(253 / 19.2 * 1vw);
     margin-left: calc(-121 / 19.2 * 1vw);
   }
-  animation: slide-in-blurred-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.2s;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -636,7 +630,17 @@ button {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 440px) {
+  .mineInfo1.active,
+  .mineInfo2.active {
+    animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  .mineInfo3.active,
+  .mineInfo4.active {
+    animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
   .header {
     height: max-content;
   }
@@ -851,7 +855,7 @@ button {
     height: calc(200 / 5 * 1vw);
     background-position: top;
     background-size: 120% cover;
-    top: calc(1330 / 9.56 * 1vh);
+    top: calc(1260 / 9.56 * 1vh);
     left: calc(50 / 5 * 1vw);
   }
 
@@ -882,7 +886,6 @@ button {
   }
 
   .headerBottomInside {
-    width: 100%;
     height: 100%;
   }
 
@@ -971,7 +974,5 @@ button {
     > img {
       margin-left: calc(-10 / 5 * 1vw);
     }
-    animation: slide-out-right 1s cubic-bezier(0.23, 1, 0.32, 1) both;
-    animation-delay: 0.2s;
   }
 }

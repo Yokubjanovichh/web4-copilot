@@ -1,9 +1,11 @@
+@import url("./font.css");
+@import url("./animation.css");
+
 .screen8ContainerMain {
-  width: 100%;
   height: 100vh;
-  background: url("../assets/images/screen8/screen8Bg.png");
+  background: url("../assets/images/screen8/screen8Bg.webp");
   background-position: top left;
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   padding: calc(123 / 19.2 * 1vw) calc(90 / 19.2 * 1vw) 0 calc(81 / 19.2 * 1vw);
   overflow: hidden;
@@ -90,9 +92,9 @@
 .contactUs {
   width: calc(570 / 19.2 * 1vw);
   height: calc(500 / 19.2 * 1vw);
-  background: url("../assets/images/screen8/contactUsBg.png");
+  background: url("../assets/images/screen8/contactUsBg.webp");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   background-position: top left;
   margin-left: calc(24 / 19.2 * 1vw);
   padding-right: calc(10 / 19.2 * 1vw);
@@ -167,7 +169,6 @@
       align-items: center;
       justify-content: center;
       width: calc(63 / 19.3 * 1vw);
-      width: calc(63 / 19.3 * 1vw);
       height: calc(63 / 19.3 * 1vw);
       border-radius: 50%;
       background: #fff;
@@ -207,16 +208,14 @@
 }
 
 .creatorItem {
-  width: 100%;
   height: calc(447 / 19.2 * 1vw);
-  background: url("../assets/images/screen8/creactor1.png");
+  background: url("../assets/images/screen8/creactor1.webp");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   background-position: top left;
   padding: calc(19 / 19.2 * 1vw) calc(25 / 19.2 * 1vw) calc(14 / 19.2 * 1vw)
     calc(14 / 19.2 * 1vw);
   > .creatorItemTitle {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -273,9 +272,8 @@
   background: rgba(205, 188, 230, 1);
   border-radius: calc(25 / 19.2 * 1vw);
   .creatorOptionInside {
-    width: 100%;
     height: 100%;
-    background: url("../assets/images/screen8/creatorOptionBg.png");
+    background: url("../assets/images/screen8/creatorOptionBg.webp");
     background-position: top right;
     background-size: calc(230 / 19.2 * 1vw) calc(250 / 19.2 * 1vw);
     background-repeat: no-repeat;
@@ -310,17 +308,16 @@
 .creatorItem2 {
   width: 100%;
   height: calc(368 / 19.2 * 1vw);
-  background: url(../assets/images/screen8/creator2.png);
+  background: url(../assets/images/screen8/creator2.webp);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .creatorItem3 {
-  width: 100%;
   height: calc(376 / 19.2 * 1vw);
-  background: url("../assets/images/screen8/creator4.png");
-  background-size: 100%;
+  background: url("../assets/images/screen8/creator4.webp");
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   padding-right: calc(11 / 19.2 * 1vw);
@@ -345,7 +342,7 @@
   .creatorItem {
     width: 100%;
     height: calc(304 / 19.2 * 1vw);
-    background: url("../assets/images/screen8/creator3.png");
+    background: url("../assets/images/screen8/creator3.webp");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -368,7 +365,7 @@
     .creatorOptionInside {
       width: 100%;
       height: 100%;
-      background: url("../assets/images/screen8/creatorOption2.png");
+      background: url("../assets/images/screen8/creatorOption2.webp");
       background-position: top right;
       background-repeat: no-repeat;
       background-size: calc(148 / 19.2 * 1vw);
@@ -382,42 +379,304 @@
 }
 
 /* animation */
-.screen8ContainerMainLeft.active {
-  animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.2s;
+
+@media only screen and (min-width: 1000px) {
+  .screen8ContainerMainLeft.active {
+    animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 0.2s;
+  }
+
+  .screen8ContainerMainLeft.hidden {
+    animation: slide-out-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 0.5s;
+  }
+
+  .creatorFirst.active {
+    animation: slide-in-blurred-top 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 0.3s;
+  }
+
+  .creatorSecond.active {
+    animation: slide-in-blurred-top 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 0.4s;
+  }
+
+  .creatorThird.active {
+    animation: slide-in-blurred-top 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 0.5s;
+  }
+
+  .creatorThird.hidden {
+    animation: slide-out-bottom 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 0.2s;
+  }
+
+  .creatorSecond.hidden {
+    animation: slide-out-bottom 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 0.3s;
+  }
+
+  .creatorFirst.hidden {
+    animation: slide-out-bottom 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 0.4s;
+  }
 }
 
-.screen8ContainerMainLeft.hidden {
-  animation: slide-out-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.5s;
-}
+/* responsive */
 
-.creatorFirst.active {
-  animation: slide-in-blurred-top 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.3s;
-}
+@media only screen and (max-width: 440px) {
+  .screen8ContainerMain {
+    height: 100vh;
+    background-size: 100% 100%;
+    padding: calc(23 / 5 * 1vw) calc(30 / 5 * 1vw) 0 calc(10 / 5 * 1vw);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    row-gap: calc(20 / 5 * 1vw);
+  }
 
-.creatorSecond.active {
-  animation: slide-in-blurred-top 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.4s;
-}
+  .creatorFirst {
+    width: calc(159 / 5 * 1vw);
+    display: flex;
+    flex-direction: column;
+    row-gap: calc(10 / 5 * 1vw);
+  }
 
-.creatorThird.active {
-  animation: slide-in-blurred-top 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.5s;
-}
+  .creatorItem {
+    height: calc(200 / 5 * 1vw);
+    background-size: 100% 100%;
+    padding: calc(7 / 5 * 1vw) calc(10 / 5 * 1vw) calc(8 / 5 * 1vw)
+      calc(8 / 5 * 1vw);
+    > .creatorItemTitle {
+      > img {
+        width: calc(24 / 5 * 1vw);
+      }
+      > .creatorItemTitleLeft {
+        align-items: center;
+        column-gap: calc(11 / 5 * 1vw);
+        > img {
+          width: calc(17 / 5 * 1vw);
+        }
+        > div {
+          > p {
+            font-size: calc(10 / 5 * 1vw);
+            font-weight: 700;
+            line-height: calc(14 / 5 * 1vw);
+          }
+          > p:nth-child(2) {
+            font-size: calc(10 / 5 * 1vw);
+            font-weight: 400;
+            line-height: calc(14 / 5 * 1vw);
+          }
+        }
+      }
+    }
+    > .creatorItemAbout {
+      font-size: calc(7 / 5 * 1vw);
+      line-height: calc(10 / 5 * 1vw);
+      padding: calc(3 / 5 * 1vw) calc(9 / 5 * 1vw) calc(2 / 5 * 1vw)
+        calc(4 / 5 * 1vw);
+      margin-top: calc(100 / 5 * 1vw);
+    }
+  }
 
-.creatorThird.hidden {
-  animation: slide-out-bottom 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.2s;
-}
+  .creatorOption {
+    height: calc(106 / 5 * 1vw);
+    border-radius: calc(15 / 5 * 1vw);
+    .creatorOptionInside {
+      background-size: calc(90 / 5 * 1vw) calc(80 / 5 * 1vw);
+      padding: calc(44 / 19.2 * 1vw) calc(23 / 19.2 * 1vw) calc(34 / 19.2 * 1vw)
+        calc(34 / 19.2 * 1vw);
+      > p:nth-child(1) {
+        font-size: calc(10 / 5 * 1vw);
+        line-height: calc(15 / 5 * 1vw);
+        margin-bottom: calc(9 / 5 * 1vw);
+      }
+      > p:nth-child(2) {
+        font-size: calc(7 / 5 * 1vw);
+        line-height: calc(11 / 5 * 1vw);
+      }
+    }
+  }
 
-.creatorSecond.hidden {
-  animation: slide-out-bottom 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.3s;
-}
+  .creatorSecond {
+    width: calc(132 / 5 * 1vw);
+    row-gap: calc(10 / 5 * 1vw);
+  }
 
-.creatorFirst.hidden {
-  animation: slide-out-bottom 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.4s;
+  .creatorItem2 {
+    height: calc(145 / 5 * 1vw);
+    background: url(../assets/images/screen8/creator2.webp);
+    background-size: 100% 100%;
+  }
+
+  .creatorItem3 {
+    height: calc(160 / 5 * 1vw);
+    background-size: 100% 100%;
+    padding-right: 0;
+    > .creatorItemTitle {
+      > .creatorItemTitleLeft {
+        column-gap: calc(4 / 5 * 1vw);
+      }
+    }
+    .creatorItemAbout {
+      width: calc(115 / 5 * 1vw);
+      margin-top: calc(70 / 5 * 1vw);
+    }
+  }
+
+  .creatorThird {
+    width: calc(164 / 5 * 1vw);
+    .creatorItem {
+      height: calc(164 / 5 * 1vw);
+      background-size: 100% 100%;
+      padding: calc(10 / 5 * 1vw) calc(7 / 5 * 1vw) calc(10 / 5 * 1vw)
+        calc(5 / 5 * 1vw);
+      .creatorItemTitle {
+        .creatorItemTitleLeft {
+          column-gap: calc(18 / 5 * 1vw);
+        }
+      }
+      .creatorItemAbout {
+        margin-top: calc(90 / 5 * 1vw);
+      }
+    }
+    > .creatorOption {
+      height: calc(143 / 5 * 1vw);
+      border-radius: calc(15 / 5 * 1vw);
+      .creatorOptionInside {
+        background-size: calc(78 / 5 * 1vw);
+        padding: calc(35 / 5 * 1vw) calc(3 / 5 * 1vw) calc(14 / 5 * 1vw)
+          calc(10 / 5 * 1vw);
+        > p:nth-child(1) {
+          margin-bottom: calc(13 / 5 * 1vw);
+        }
+      }
+    }
+  }
+
+  .screen8ContainerMainBottom {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+  }
+
+  .screen8ContainerMainLeftTitle {
+    width: 100%;
+    font-size: calc(45 / 5 * 1vw);
+    line-height: calc(53 / 5 * 1vw);
+    justify-content: flex-end;
+    align-items: flex-end;
+    > div {
+      column-gap: calc(10 / 5 * 1vw);
+      > img {
+        width: calc(183 / 5 * 1vw);
+      }
+    }
+  }
+
+  .screen8ContainerMainLeft {
+    > p:nth-child(2) {
+      width: 100%;
+      font-size: calc(18 / 5 * 1vw);
+      line-height: calc(25 / 5 * 1vw);
+      margin-top: calc(15 / 5 * 1vw);
+      margin-bottom: calc(15 / 5 * 1vw);
+      margin-left: calc(7 / 5 * 1vw);
+    }
+  }
+
+  .workWithUs {
+    width: calc(130 / 5 * 1vw);
+    padding: calc(6 / 5 * 1vw) calc(7 / 5 * 1vw) calc(6 / 5 * 1vw)
+      calc(23 / 5 * 1vw);
+    margin-left: 0;
+
+    > p {
+      font-size: calc(10 / 5 * 1vw);
+      line-height: calc(20 / 5 * 1vw);
+    }
+    > div {
+      width: calc(25 / 5 * 1vw);
+      height: calc(25 / 5 * 1vw);
+      > img {
+        width: calc(10 / 5 * 1vw);
+      }
+    }
+  }
+
+  .contactUs {
+    width: calc(420 / 5 * 1vw);
+    height: calc(390 / 5 * 1vw);
+    background-size: 100% 100%;
+    margin-left: calc(24 / 5 * 1vw);
+    margin-top: calc(30 / 5 * 1vw);
+    padding-right: calc(10 / 5 * 1vw);
+  }
+
+  .contactUsTop {
+    padding: calc(30 / 5 * 1vw) 0 0 calc(25 / 5 * 1vw);
+    > p:nth-child(1) {
+      font-size: calc(20 / 5 * 1vw);
+      line-height: calc(24 / 5 * 1vw);
+      margin-bottom: calc(10 / 5 * 1vw);
+    }
+    > div {
+      column-gap: calc(3 / 5 * 1vw);
+      > img {
+        width: calc(12 / 5 * 1vw);
+      }
+      > a {
+        font-size: calc(12 / 5 * 1vw);
+        line-height: calc(16 / 5 * 1vw);
+      }
+    }
+    > div:nth-child(3) {
+      > img {
+        width: calc(11 / 5 * 1vw);
+      }
+    }
+  }
+
+  .contactUsLogo {
+    margin-top: calc(25 / 5 * 1vw);
+    margin-left: calc(15 / 5 * 1vw);
+    > img {
+      width: calc(120 / 5 * 1vw);
+    }
+  }
+
+  .ourSocials {
+    row-gap: calc(15 / 5 * 1vw);
+    padding-right: calc(10 / 5 * 1vw);
+    > p {
+      font-size: calc(18 / 5 * 1vw);
+      line-height: calc(22 / 5 * 1vw);
+    }
+    .socials {
+      column-gap: calc(5 / 5 * 1vw);
+      > a {
+        width: calc(28 / 5 * 1vw);
+        height: calc(28 / 5 * 1vw);
+        > img {
+          width: calc(15 / 5 * 1vw);
+        }
+      }
+      > a:nth-child(2) {
+        > img {
+          width: calc(15 / 5 * 1vw);
+        }
+      }
+      > a:nth-child(3) {
+        > img {
+          width: calc(15 / 5 * 1vw);
+        }
+      }
+      > a:nth-child(4) {
+        > img {
+          width: calc(14 / 5 * 1vw);
+        }
+      }
+    }
+  }
 }
