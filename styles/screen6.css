@@ -465,24 +465,26 @@
 
 /* animation */
 
-.screen6ContainerMainLeft.active {
-  animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.2s;
-}
+@media only screen and (min-width: 1000px) {
+  .screen6ContainerMainLeft.active {
+    animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 0.2s;
+  }
 
-.screen6ContainerMainLeft.hidden {
-  animation: slide-out-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.2s;
-}
+  .screen6ContainerMainLeft.hidden {
+    animation: slide-out-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 0.2s;
+  }
 
-.screen6ContainerMainRight.active {
-  animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.5s;
-}
+  .screen6ContainerMainRight.active {
+    animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 0.5s;
+  }
 
-.screen6ContainerMainRight.hidden {
-  animation: slide-out-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.5s;
+  .screen6ContainerMainRight.hidden {
+    animation: slide-out-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 0.5s;
+  }
 }
 
 /* responsive */

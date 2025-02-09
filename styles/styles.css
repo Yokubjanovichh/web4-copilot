@@ -405,7 +405,7 @@ button {
   z-index: 3;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1000px) {
   .headerTopInsideBodyTitleLeft.hidden {
     animation: slide-out-left 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
   }

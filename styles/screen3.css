@@ -17,14 +17,6 @@
   column-gap: calc(143 / 19.2 * 1vw);
 }
 
-.screen3ContainerWrapper.active {
-  animation: slide-in-blurred-right 2s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
-
-.screen3ContainerWrapper.hidden {
-  animation: slide-out-right 2s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
-
 .screen3ContainerMineBg {
   width: calc(675 / 19.2 * 1vw);
   height: calc(528 / 19.2 * 1vw);
@@ -41,15 +33,6 @@
   background-position: top right, bottom right;
   background-size: 100% calc(430 / 19.2 * 1vw), 100% calc(520 / 19.2 * 1vw);
   background-repeat: no-repeat;
-}
-
-.screen3ContainerWrapperLeft.active {
-  animation: slide-in-blurred-right 2s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 1s;
-}
-
-.screen3ContainerWrapperLeft.hidden {
-  animation: slide-out-right 1.5s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
 .screen3ContainerWrapperLeft > img {
@@ -168,15 +151,6 @@
   }
 }
 
-.screen3ContainerWrapperRight.active {
-  animation: slide-in-blurred-right 2s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 1.4s;
-}
-
-.screen3ContainerWrapperRight.hidden {
-  animation: slide-out-right 1.5s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
-
 .screen3ContainerWrapperRightBtns {
   margin-top: calc(57 / 19.2 * 1vw);
   display: flex;
@@ -267,6 +241,36 @@
         font-weight: 600;
       }
     }
+  }
+}
+
+/* animation */
+
+@media only screen and (min-width: 1000px) {
+  .screen3ContainerWrapper.active {
+    animation: slide-in-blurred-right 2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  .screen3ContainerWrapper.hidden {
+    animation: slide-out-right 2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  .screen3ContainerWrapperLeft.active {
+    animation: slide-in-blurred-right 2s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 1s;
+  }
+
+  .screen3ContainerWrapperLeft.hidden {
+    animation: slide-out-right 1.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  .screen3ContainerWrapperRight.active {
+    animation: slide-in-blurred-right 2s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 1.4s;
+  }
+
+  .screen3ContainerWrapperRight.hidden {
+    animation: slide-out-right 1.5s cubic-bezier(0.23, 1, 0.32, 1) both;
   }
 }
 

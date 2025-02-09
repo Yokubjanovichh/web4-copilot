@@ -118,68 +118,68 @@
 }
 
 /* animatsiya */
+@media only screen and (min-width: 1000px) {
+  .robotHeadRightCircle.active {
+    animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
 
-.robotHeadRightCircle.active {
-  animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  .robotHeadRightCircle.hidden {
+    animation: slide-out-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  .robotHeadRightCircleImg.active {
+    animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 0.2s;
+  }
+
+  .robotHeadRightCircleImg.hidden {
+    animation: slide-out-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  .textIconWrapper.active {
+    animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  .textIconWrapper.hidden {
+    animation: slide-out-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  .screen4ContainerTitle.active {
+    animation: slide-in-blurred-left 1.4s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 0.5s;
+  }
+
+  .screen4ContainerTitle.hidden {
+    animation: slide-out-left 1.4s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  .textIconWrapper1.hidden,
+  .textIconWrapper2.hidden,
+  .textIconWrapper3.hidden,
+  .textIconWrapper4.hidden {
+    animation: slide-out-left 1.4s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  .textIconWrapper1.active {
+    animation: slide-in-blurred-left 1.4s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 0.9s;
+  }
+
+  .textIconWrapper2.active {
+    animation: slide-in-blurred-left 1.4s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 1s;
+  }
+
+  .textIconWrapper3.active {
+    animation: slide-in-blurred-left 1.4s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 1.1s;
+  }
+
+  .textIconWrapper4.active {
+    animation: slide-in-blurred-left 1.4s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: 1.2s;
+  }
 }
-
-.robotHeadRightCircle.hidden {
-  animation: slide-out-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
-
-.robotHeadRightCircleImg.active {
-  animation: slide-in-blurred-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.2s;
-}
-
-.robotHeadRightCircleImg.hidden {
-  animation: slide-out-right 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
-
-.textIconWrapper.active {
-  animation: slide-in-blurred-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
-
-.textIconWrapper.hidden {
-  animation: slide-out-left 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
-
-.screen4ContainerTitle.active {
-  animation: slide-in-blurred-left 1.4s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.5s;
-}
-
-.screen4ContainerTitle.hidden {
-  animation: slide-out-left 1.4s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
-
-.textIconWrapper1.hidden,
-.textIconWrapper2.hidden,
-.textIconWrapper3.hidden,
-.textIconWrapper4.hidden {
-  animation: slide-out-left 1.4s cubic-bezier(0.23, 1, 0.32, 1) both;
-}
-
-.textIconWrapper1.active {
-  animation: slide-in-blurred-left 1.4s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 0.9s;
-}
-
-.textIconWrapper2.active {
-  animation: slide-in-blurred-left 1.4s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 1s;
-}
-
-.textIconWrapper3.active {
-  animation: slide-in-blurred-left 1.4s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 1.1s;
-}
-
-.textIconWrapper4.active {
-  animation: slide-in-blurred-left 1.4s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 1.2s;
-}
-
 /* responsive */
 
 @media only screen and (max-width: 440px) {
